@@ -2,48 +2,104 @@ import type { Metadata } from "next";
 import { Construction } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact PickBlend — Get in Touch",
   description:
-    "Get in touch with the ToolKit team. We'd love to hear your feedback and suggestions for our free online writing tools.",
-  keywords: [
-    "contact ToolKit",
-    "feedback",
-    "writing tools support",
-    "get in touch",
-  ],
+    "Have a question or suggestion for PickBlend? We'd love to hear from you. Contact our team about our free writing tools.",
   openGraph: {
-    title: "Contact — ToolKit",
+    title: "Contact PickBlend — Get in Touch",
     description:
-      "Get in touch with the ToolKit team. We'd love to hear your feedback and suggestions.",
-    url: "https://www.yourtoolkit.com/contact",
+      "Have a question or suggestion for PickBlend? We'd love to hear from you. Contact our team about our free writing tools.",
+    url: "https://www.pickblend.com/contact",
+    type: "website",
+    locale: "en_US",
+    siteName: "PickBlend",
   },
+  twitter: {
+    card: "summary_large_image",
+  },
+  authors: [{ name: "PickBlend" }],
   alternates: {
-    canonical: "https://www.yourtoolkit.com/contact",
+    canonical: "https://www.pickblend.com/contact",
   },
   robots: {
-    index: false,
+    index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
   },
 };
 
+function ContactPageJsonLd() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: "Contact PickBlend",
+    url: "https://www.pickblend.com/contact",
+    description:
+      "Contact the PickBlend team with questions or suggestions about our free writing tools.",
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
 export default function ContactPage() {
   return (
-    <main className="flex flex-1 items-center justify-center px-4 py-24 sm:py-32">
-      <div className="mx-auto max-w-md text-center">
-        <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-blue-50">
-          <Construction className="h-10 w-10 text-primary" strokeWidth={1.8} />
+    <>
+      <ContactPageJsonLd />
+      <main className="px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl">
+          <header className="mb-10 text-center">
+            <h1 className="text-4xl font-extrabold tracking-tight text-text sm:text-5xl">
+              Contact PickBlend
+            </h1>
+            <p className="mt-4 text-lg text-text-secondary">
+              We&apos;d love to hear from you
+            </p>
+          </header>
+
+          <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
+            <div className="space-y-6 text-text-secondary">
+              <p className="text-lg">
+                Have a question, suggestion, or feedback about our free writing tools? We&apos;re here to help.
+              </p>
+
+              <div className="space-y-4">
+                <h2 className="text-xl font-bold text-text">Get in Touch</h2>
+                <p>
+                  We&apos;re currently setting up our contact form. In the meantime, if you&apos;d like to reach out about:
+                </p>
+                <ul className="list-inside list-disc space-y-2 pl-4">
+                  <li>Bug reports or technical issues</li>
+                  <li>Feature requests for new tools</li>
+                  <li>Suggestions for improving existing tools</li>
+                  <li>Partnership or collaboration opportunities</li>
+                  <li>General questions about PickBlend</li>
+                </ul>
+                <p className="mt-4">
+                  Check back soon — we&apos;re building a proper contact form that maintains our privacy-first approach. No tracking, no third-party services, just direct communication.
+                </p>
+              </div>
+
+              <div className="mt-8 rounded-xl border border-border bg-surface-alt p-6">
+                <h3 className="font-semibold text-text">Quick Support</h3>
+                <p className="mt-2 text-sm">
+                  For immediate help with our tools, check out the FAQ sections on each tool page. Most common questions are answered there with detailed explanations.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <h1 className="text-3xl font-extrabold tracking-tight text-text">
-          Contact Us
-        </h1>
-        <div className="mt-4 rounded-2xl border border-border bg-white p-6 shadow-sm">
-          <p className="text-lg font-medium text-primary">Under Development</p>
-          <p className="mt-2 text-sm leading-relaxed text-text-secondary">
-            We&apos;re building a proper contact form. In the meantime, check
-            back soon — we&apos;ll have everything ready for you shortly.
-          </p>
-        </div>
-      </div>
-    </main>
+      </main>
+    </>
   );
 }

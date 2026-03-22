@@ -10,41 +10,40 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const BASE_URL = "https://www.yourtoolkit.com";
+const BASE_URL = "https://www.pickblend.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "ToolKit — Free Online Writing & SEO Tools",
-    template: "%s | ToolKit",
+    default: "Free Online Writing Tools — Word Counter & More | PickBlend",
+    template: "%s | PickBlend",
   },
   description:
-    "Free suite of online writing tools — word counter, character counter, keyword density analyzer, reading time calculator and more. No sign-up required.",
-  keywords: [
-    "online tools",
-    "writing tools",
-    "word counter",
-    "character counter",
-    "SEO tools",
-    "free tools",
-    "keyword density",
-    "reading time calculator",
-  ],
-  authors: [{ name: "ToolKit" }],
+    "Free online writing tools by PickBlend. Count words, estimate reading time, analyze keyword density — all free, instant, and 100% private. No sign-up required.",
+  authors: [{ name: "PickBlend" }],
   openGraph: {
     type: "website",
     locale: "en_US",
     url: BASE_URL,
-    siteName: "ToolKit",
-    title: "ToolKit — Free Online Writing & SEO Tools",
+    siteName: "PickBlend",
+    title: "Free Online Writing Tools | PickBlend",
     description:
-      "Free suite of online writing tools — word counter, character counter, keyword density analyzer, reading time calculator and more.",
+      "Free word counter, reading time calculator and more. No ads blocking your view. 100% private — your text never leaves your browser.",
+    images: [
+      {
+        url: `${BASE_URL}/og/home.png`,
+        width: 1200,
+        height: 630,
+        alt: "PickBlend - Free Online Writing Tools",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ToolKit — Free Online Writing & SEO Tools",
+    title: "Free Online Writing Tools | PickBlend",
     description:
-      "Free word counter, reading time calculator, keyword density analyzer and more. No sign-up required.",
+      "Free word counter, reading time calculator and more. No ads blocking your view. 100% private — your text never leaves your browser.",
+    images: [`${BASE_URL}/og/home.png`],
   },
   alternates: {
     canonical: BASE_URL,
@@ -60,19 +59,26 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 function GlobalJsonLd() {
   const webSite = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "ToolKit",
+    name: "PickBlend",
     url: BASE_URL,
     description:
-      "Free suite of online writing and SEO tools including word counter, reading time calculator, keyword density analyzer, and more.",
+      "Free online writing tools — word counter, reading time calculator, and more.",
     potentialAction: {
       "@type": "SearchAction",
-      target: `${BASE_URL}/tools/{search_term_string}`,
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${BASE_URL}/tools/{search_term_string}`,
+      },
       "query-input": "required name=search_term_string",
     },
   };
@@ -80,10 +86,10 @@ function GlobalJsonLd() {
   const organization = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "ToolKit",
+    name: "PickBlend",
     url: BASE_URL,
     description:
-      "Free online writing and SEO tools for writers, students, bloggers, and marketers.",
+      "Free online writing and SEO tools for writers, students, bloggers, and content creators.",
   };
 
   return (
@@ -119,7 +125,7 @@ export default function RootLayout({
         <footer className="border-t border-border bg-white/60 py-8 text-center text-sm text-text-secondary backdrop-blur-sm">
           <div className="mx-auto max-w-4xl px-4">
             <p className="mb-3">
-              &copy; {new Date().getFullYear()} ToolKit. All rights reserved.
+              &copy; {new Date().getFullYear()} PickBlend. All rights reserved.
             </p>
             <nav
               aria-label="Footer navigation"

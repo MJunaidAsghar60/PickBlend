@@ -188,9 +188,7 @@ export default function ReadingTimeCalculator() {
   return (
     <section className="animate-fade-in mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
       {/* ---------- Top Banner Ad Slot ---------- */}
-      <div className="mb-6 flex min-h-[90px] items-center justify-center rounded-2xl border-2 border-dashed border-border bg-surface-alt text-sm text-text-secondary">
-        Top Banner Ad — 728 &times; 90
-      </div>
+      <div className="mb-6 min-h-[90px]" aria-hidden="true"></div>
 
       {/* ---------- Header ---------- */}
       <header className="mb-8 text-center">
@@ -417,9 +415,7 @@ export default function ReadingTimeCalculator() {
           )}
 
           {/* Sidebar Ad Slot */}
-          <div className="flex min-h-[250px] items-center justify-center rounded-2xl border-2 border-dashed border-border bg-surface-alt text-sm text-text-secondary">
-            Sidebar Ad — 300 &times; 250
-          </div>
+          <div className="min-h-[250px]" aria-hidden="true"></div>
 
           {/* Content Benchmarks (Mobile) */}
           <div className="rounded-2xl border border-border bg-surface p-5 shadow-sm lg:hidden">
@@ -438,9 +434,7 @@ export default function ReadingTimeCalculator() {
       </div>
 
       {/* ---------- In-Content Ad Slot ---------- */}
-      <div className="mt-8 flex min-h-[90px] items-center justify-center rounded-2xl border-2 border-dashed border-border bg-surface-alt text-sm text-text-secondary">
-        In-Content Ad — 728 &times; 90
-      </div>
+      <div className="mt-8 min-h-[90px]" aria-hidden="true"></div>
     </section>
   );
 }

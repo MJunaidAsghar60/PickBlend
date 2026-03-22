@@ -207,16 +207,14 @@ export default function WordCounter() {
   return (
     <section className="animate-fade-in mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
       {/* ---------- Top Banner Ad Slot ---------- */}
-      <div className="mb-6 flex min-h-[90px] items-center justify-center rounded-2xl border-2 border-dashed border-border bg-surface-alt text-sm text-text-secondary">
-        Top Banner Ad — 728 &times; 90
-      </div>
+      <div className="mb-6 min-h-[90px]" aria-hidden="true"></div>
 
       {/* ---------- Header ---------- */}
       <header className="mb-8 text-center">
         <h1 className="text-3xl font-extrabold tracking-tight text-text sm:text-4xl lg:text-5xl">
-          Free Online{" "}
+          Free Online Word Counter —{" "}
           <span className="text-primary">
-            Word Counter
+            Words, Characters, Sentences & Reading Time
           </span>
         </h1>
         <p className="mx-auto mt-3 max-w-2xl text-base text-text-secondary sm:text-lg">
@@ -381,9 +379,7 @@ export default function WordCounter() {
           </div>
 
           {/* Sidebar Ad Slot */}
-          <div className="flex min-h-[250px] items-center justify-center rounded-2xl border-2 border-dashed border-border bg-surface-alt text-sm text-text-secondary">
-            Sidebar Ad — 300 &times; 250
-          </div>
+          <div className="min-h-[250px]" aria-hidden="true"></div>
 
           {/* Keyword Density — Mobile */}
           <div className="rounded-2xl border border-border bg-surface p-5 shadow-sm lg:hidden">
@@ -399,9 +395,7 @@ export default function WordCounter() {
       </div>
 
       {/* ---------- In-Content Ad Slot ---------- */}
-      <div className="mt-8 flex min-h-[90px] items-center justify-center rounded-2xl border-2 border-dashed border-border bg-surface-alt text-sm text-text-secondary">
-        In-Content Ad — 728 &times; 90
-      </div>
+      <div className="mt-8 min-h-[90px]" aria-hidden="true"></div>
     </section>
   );
 }

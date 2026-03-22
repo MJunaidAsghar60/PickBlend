@@ -219,6 +219,16 @@ export default function SEOContent() {
             receive the highest engagement. Meanwhile, speakers preparing for a
             TED-style talk (18 minutes) should aim for around 2,300 words.
           </p>
+          <p>
+            Need more precise timing options? Try our dedicated{" "}
+            <a
+              href="/tools/reading-time-calculator"
+              className="font-medium text-primary underline-offset-2 hover:underline"
+            >
+              Reading Time Calculator
+            </a>{" "}
+            with multiple reading and speaking speeds and platform-specific benchmarks.
+          </p>
           <h3 className="mt-6 text-lg font-semibold text-text">
             Quick Reference: Words to Time
           </h3>

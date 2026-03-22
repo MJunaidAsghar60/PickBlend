@@ -13,27 +13,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "ToolKit — Free Online Writing & SEO Tools",
-  description:
-    "Supercharge your writing with our free suite of online tools. Word counter, character counter, keyword density analyzer, reading time calculator and more — all beautifully designed and lightning fast.",
-  keywords: [
-    "free online tools",
-    "writing tools",
-    "word counter online",
-    "reading time calculator",
-    "keyword density checker",
-    "character counter",
-    "SEO writing tools",
-  ],
-  openGraph: {
-    title: "ToolKit — Free Online Writing & SEO Tools",
-    description:
-      "Supercharge your writing with free tools — word counter, reading time calculator, keyword density analyzer and more.",
-    url: "https://www.yourtoolkit.com",
-  },
-  alternates: {
-    canonical: "https://www.yourtoolkit.com",
-  },
+  // Title handled by layout.tsx default
 };
 
 const features = [
@@ -109,14 +89,16 @@ export default function HomePage() {
           </div>
 
           <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-text sm:text-5xl lg:text-6xl">
-            The Writing Tools You{" "}
-            <span className="text-primary">Actually Need</span>
+            Free Online Writing Tools —{" "}
+            <span className="text-primary">Word Counter, Reading Time & More</span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-text-secondary sm:text-xl">
-            Beautiful, blazing-fast utilities for writers, students, bloggers &
-            marketers. Count words, analyze keyword density, estimate reading
-            time — all in real time, all completely free.
+            Instant, browser-based utilities for writers, students, bloggers and content creators. No sign-up, no ads, 100% private.
+          </p>
+
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-text-secondary">
+            Free, blazing-fast writing utilities that run entirely in your browser. Count words, analyze keyword density, calculate reading and speaking time — all in real time, all completely free, all 100% private.
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -124,7 +106,7 @@ export default function HomePage() {
               href="/tools/word-counter"
               className="group inline-flex items-center gap-2 rounded-2xl bg-primary px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:bg-primary-dark hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5"
             >
-              Open Word Counter
+              Count Words Free →
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
             <a
@@ -142,7 +124,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 text-center">
             <h2 className="text-2xl font-bold text-text sm:text-3xl">
-              Why Choose ToolKit?
+              Why Choose PickBlend?
             </h2>
             <p className="mt-3 text-text-secondary">
               Built differently — designed for speed, privacy, and delight.
@@ -216,7 +198,7 @@ export default function HomePage() {
                     </p>
                   </div>
                   <div className="flex shrink-0 items-center gap-1.5 text-sm font-semibold text-primary transition-transform group-hover:translate-x-1">
-                    Open Tool
+                    {tool.name === "Word Counter" ? "Count Words Free →" : "Calculate Reading Time →"}
                     <ArrowRight className="h-4 w-4" />
                   </div>
                 </Link>

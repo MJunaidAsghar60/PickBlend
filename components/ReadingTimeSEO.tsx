@@ -40,7 +40,14 @@ export default function ReadingTimeSEO() {
             time at three different speeds (slow, average, and fast), provides a
             separate speaking time estimate with five pacing options, and shows
             benchmarks for common content types from tweets to eBook chapters.
-            You can paste your full text or simply enter a word count — results
+            You can paste your text directly or use our{" "}
+            <a
+              href="/tools/word-counter"
+              className="font-medium text-primary underline-offset-2 hover:underline"
+            >
+              Word Counter tool
+            </a>{" "}
+            to get your exact word count first, then enter that count here — results
             update in real time without any page reloads.
           </p>
         </section>

@@ -83,7 +83,7 @@ export default function Navbar() {
             <Sparkles className="h-5 w-5 text-white" strokeWidth={2.2} />
           </div>
           <span className="text-lg font-bold tracking-tight text-text">
-            Tool<span className="text-primary">Kit</span>
+            Pick<span className="text-primary">Blend</span>
           </span>
         </Link>
 
