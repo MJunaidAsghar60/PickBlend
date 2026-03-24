@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://www.yourtoolkit.com/sitemap.xml",
+    sitemap: "https://www.pickblend.com/sitemap.xml",
   };
 }
