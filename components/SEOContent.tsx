@@ -93,7 +93,7 @@ export default function SEOContent() {
           <p>
             Every social media platform enforces character or word limits. Going
             over means your post gets cut off or rejected entirely. Here is a
-            quick reference for the most popular platforms in 2025:
+            quick reference for the most popular platforms in 2026:
           </p>
           <div className="mt-4 overflow-hidden rounded-xl border border-border">
             <table className="w-full text-left text-sm">

@@ -48,7 +48,7 @@ const features = [
     icon: MousePointerClick,
     title: "Zero Friction",
     description:
-      "No sign-ups, no ads blocking your view, no paywalls. Just open and start writing.",
+      "No sign-ups, minimal, non-intrusive ads, no paywalls. Just open and start writing.",
     iconColor: "text-accent-red",
     bg: "bg-red-50",
   },
@@ -126,7 +126,7 @@ export default function HomePage() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-text-secondary sm:text-xl">
-            Instant, browser-based utilities for writers, students, bloggers and content creators. No sign-up, no ads, 100% private.
+            Instant, browser-based utilities for writers, students, bloggers and content creators. No sign-up, 100% private.
           </p>
 
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-text-secondary">
