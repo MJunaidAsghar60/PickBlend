@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Construction } from "lucide-react";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact PickBlend — Get in Touch",
   description:
-    "Have a question or suggestion for PickBlend? We'd love to hear from you. Contact our team about our free writing tools.",
+    "Contact PickBlend. Send us your questions, bug reports, feature requests or feedback about our free writing tools.",
   openGraph: {
     title: "Contact PickBlend — Get in Touch",
     description:
-      "Have a question or suggestion for PickBlend? We'd love to hear from you. Contact our team about our free writing tools.",
+      "Contact PickBlend. Send us your questions, bug reports, feature requests or feedback about our free writing tools.",
     url: "https://pickblend.com/contact",
     type: "website",
     locale: "en_US",
@@ -57,8 +57,8 @@ export default function ContactPage() {
     <>
       <ContactPageJsonLd />
       <main className="px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl">
-          <header className="mb-10 text-center">
+        <div className="mx-auto max-w-5xl">
+          <header className="mb-12 text-center">
             <h1 className="text-4xl font-extrabold tracking-tight text-text sm:text-5xl">
               Contact PickBlend
             </h1>
@@ -67,35 +67,47 @@ export default function ContactPage() {
             </p>
           </header>
 
-          <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
+          <div className="flex flex-col gap-8 lg:grid lg:grid-cols-[2fr_3fr] lg:gap-12 lg:items-start">
+            {/* Left column — info */}
             <div className="space-y-6 text-text-secondary">
-              <p className="text-lg">
-                Have a question, suggestion, or feedback about our free writing tools? We&apos;re here to help.
+              <p className="text-base leading-relaxed">
+                Have a question, bug to report, or idea for a new tool? Send us a message and we&apos;ll get back to you.
               </p>
 
-              <div className="space-y-4">
-                <h2 className="text-xl font-bold text-text">Get in Touch</h2>
-                <p>
-                  We&apos;re currently setting up our contact form. In the meantime, if you&apos;d like to reach out about:
-                </p>
-                <ul className="list-inside list-disc space-y-2 pl-4">
-                  <li>Bug reports or technical issues</li>
-                  <li>Feature requests for new tools</li>
-                  <li>Suggestions for improving existing tools</li>
-                  <li>Partnership or collaboration opportunities</li>
-                  <li>General questions about PickBlend</li>
+              <div>
+                <h2 className="mb-3 text-base font-semibold text-text">What you can reach us about</h2>
+                <ul className="space-y-2 text-sm">
+                  {[
+                    "Bug reports or technical issues",
+                    "Feature requests for new tools",
+                    "Suggestions for improving existing tools",
+                    "General questions about PickBlend",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                        <svg className="h-2.5 w-2.5" fill="currentColor" viewBox="0 0 8 8">
+                          <circle cx="4" cy="4" r="3" />
+                        </svg>
+                      </span>
+                      {item}
+                    </li>
+                  ))}
                 </ul>
-                <p className="mt-4">
-                  Check back soon — we&apos;re building a proper contact form that maintains our privacy-first approach. No tracking, no third-party services, just direct communication.
-                </p>
               </div>
 
-              <div className="mt-8 rounded-xl border border-border bg-surface-alt p-6">
-                <h3 className="font-semibold text-text">Quick Support</h3>
-                <p className="mt-2 text-sm">
-                  For immediate help with our tools, check out the FAQ sections on each tool page. Most common questions are answered there with detailed explanations.
+              <div className="rounded-xl border border-border bg-surface-alt p-4 text-sm space-y-2">
+                <p>
+                  <span className="font-medium text-text">Response time:</span> We typically respond within 1–2 business days.
+                </p>
+                <p>
+                  Your message is sent directly to our team. We never share your email with third parties.
                 </p>
               </div>
+            </div>
+
+            {/* Right column — form */}
+            <div className="rounded-2xl border border-border bg-white p-6 shadow-sm sm:p-8">
+              <ContactForm />
             </div>
           </div>
         </div>
