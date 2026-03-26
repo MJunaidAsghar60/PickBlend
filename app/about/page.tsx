@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Construction } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About PickBlend — Free Writing Tools for Everyone",
   description:
-    "PickBlend builds free, privacy-first writing tools for writers, students, and creators. No sign-ups, no ads blocking your work, no data sent to servers.",
+    "PickBlend builds free, privacy-first writing tools including word counter, reading time calculator, character counter, text case converter, and lorem ipsum generator. No sign-up, 100% private.",
   authors: [{ name: "PickBlend" }],
   openGraph: {
     type: "website",
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     siteName: "PickBlend",
     title: "About PickBlend — Free Writing Tools for Everyone",
     description:
-      "PickBlend builds free, privacy-first writing tools for writers, students, and creators. No sign-ups, no ads blocking your work, no data sent to servers.",
+      "PickBlend builds free, privacy-first writing tools including word counter, reading time calculator, character counter, text case converter, and lorem ipsum generator. No sign-up, 100% private.",
     url: "https://pickblend.com/about",
   },
   twitter: {
@@ -59,7 +60,7 @@ export default function AboutPage() {
 
           <h2 className="mt-8 text-2xl font-bold text-text">Who We Build For</h2>
           <p>
-            Our tools are designed for anyone who writes — students checking word counts for essays, bloggers optimizing articles for SEO, content creators estimating reading times, speechwriters preparing presentations, and social media managers staying within character limits. Whether you&apos;re writing a tweet or a thesis, PickBlend has the utilities you need.
+            Our tools are designed for anyone who writes — students checking word counts for essays, bloggers optimizing articles for SEO, content creators estimating reading times, speechwriters preparing presentations, and social media managers staying within character limits. Developers and designers rely on our <Link href="/tools/case-converter" className="text-primary underline underline-offset-2">Text Case Converter</Link> for instant camelCase, snake_case and kebab-case conversion, and our <Link href="/tools/lorem-ipsum-generator" className="text-primary underline underline-offset-2">Lorem Ipsum Generator</Link> for placeholder text during prototyping. Whether you&apos;re writing a tweet or a thesis, PickBlend has the utilities you need.
           </p>
 
           <h2 className="mt-8 text-2xl font-bold text-text">Privacy by Design</h2>
@@ -74,7 +75,7 @@ export default function AboutPage() {
 
           <h2 className="mt-8 text-2xl font-bold text-text">What&apos;s Next</h2>
           <p>
-            We&apos;re constantly expanding our toolkit. Current tools include a comprehensive word counter with keyword density analysis and a reading time calculator with speaking time estimates. Coming soon: grammar checker, plagiarism detector, readability scorer, and more — all built with the same privacy-first, no-nonsense approach.
+            We&apos;re constantly expanding our toolkit. Our current toolkit includes five free tools: a comprehensive <Link href="/tools/word-counter" className="text-primary underline underline-offset-2">Word Counter</Link> with keyword density analysis and text case conversion, a <Link href="/tools/reading-time-calculator" className="text-primary underline underline-offset-2">Reading Time Calculator</Link> with speaking time estimates for multiple pacing options, a <Link href="/tools/character-counter" className="text-primary underline underline-offset-2">Character Counter</Link> with live platform limit tracking for Twitter, Instagram, SMS and meta tags, a <Link href="/tools/case-converter" className="text-primary underline underline-offset-2">Text Case Converter</Link> supporting ten case formats including camelCase and snake_case, and a <Link href="/tools/lorem-ipsum-generator" className="text-primary underline underline-offset-2">Lorem Ipsum Generator</Link> for placeholder text by paragraphs, sentences or words. Coming soon: grammar checker, plagiarism detector, readability scorer, text diff checker, and more — all built with the same privacy-first, no-nonsense approach.
           </p>
         </div>
       </article>
