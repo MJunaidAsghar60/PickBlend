@@ -7,6 +7,9 @@ import {
   Shield,
   Clock,
   Timer,
+  Hash,
+  CaseSensitive,
+  FileText,
   BarChart3,
   Sparkles,
   MousePointerClick,
@@ -59,6 +62,7 @@ const toolsList = [
     description:
       "Count words, characters, sentences & paragraphs. Get reading time estimates, keyword density analysis, and text transformation tools.",
     tag: "Most Popular",
+    cta: "Count Words Free →",
   },
   {
     name: "Reading Time Calculator",
@@ -67,6 +71,34 @@ const toolsList = [
     description:
       "Calculate reading time, speaking time, and presentation pacing. Supports multiple speeds with benchmarks for articles, speeches, podcasts, and video scripts.",
     tag: "New",
+    cta: "Calculate Reading Time →",
+  },
+  {
+    name: "Character Counter",
+    href: "/tools/character-counter",
+    icon: Hash,
+    description:
+      "Count characters with and without spaces instantly. Check Twitter, Instagram, SMS and meta tag limits in real time.",
+    tag: "New",
+    cta: "Count Characters Free →",
+  },
+  {
+    name: "Text Case Converter",
+    href: "/tools/case-converter",
+    icon: CaseSensitive,
+    description:
+      "Convert text to UPPERCASE, lowercase, Title Case, camelCase, snake_case and more with a single click.",
+    tag: "New",
+    cta: "Convert Case Free →",
+  },
+  {
+    name: "Lorem Ipsum Generator",
+    href: "/tools/lorem-ipsum-generator",
+    icon: FileText,
+    description:
+      "Generate placeholder text by paragraphs, sentences or words. Perfect for designers and developers.",
+    tag: "New",
+    cta: "Generate Text Free →",
   },
 ];
 
@@ -198,7 +230,7 @@ export default function HomePage() {
                     </p>
                   </div>
                   <div className="flex shrink-0 items-center gap-1.5 text-sm font-semibold text-primary transition-transform group-hover:translate-x-1">
-                    {tool.name === "Word Counter" ? "Count Words Free →" : "Calculate Reading Time →"}
+                    {tool.cta}
                     <ArrowRight className="h-4 w-4" />
                   </div>
                 </Link>
@@ -206,16 +238,21 @@ export default function HomePage() {
             })}
           </div>
 
-          {/* Coming soon teaser */}
+          {/* More tools link */}
           <div className="mt-8 rounded-2xl border-2 border-dashed border-border bg-surface-alt/50 p-8 text-center">
             <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-surface-hover">
               <Clock className="h-6 w-6 text-text-secondary/40" />
             </div>
             <h3 className="text-base font-bold text-text">More Tools Coming Soon</h3>
             <p className="mt-2 text-sm text-text-secondary">
-              Grammar checker, plagiarism detector, readability scorer, and more
-              — stay tuned!
+              Grammar checker, plagiarism detector, readability scorer, and more — stay tuned!
             </p>
+            <Link
+              href="/tools"
+              className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline underline-offset-2"
+            >
+              Browse all tools →
+            </Link>
           </div>
         </div>
       </section>

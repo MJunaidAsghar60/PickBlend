@@ -122,46 +122,59 @@ export default function RootLayout({
       >
         <Navbar />
         <div className="flex-1">{children}</div>
-        <footer className="border-t border-border bg-white/60 py-8 text-center text-sm text-text-secondary backdrop-blur-sm">
-          <div className="mx-auto max-w-4xl px-4">
-            <p className="mb-3">
-              &copy; {new Date().getFullYear()} PickBlend. All rights reserved.
+        <footer className="border-t border-border bg-white/60 py-10 text-sm text-text-secondary backdrop-blur-sm">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            {/* Tools row */}
+            <div className="mb-4">
+              <p className="mb-2 text-center text-[11px] font-semibold uppercase tracking-widest text-text-secondary/50">
+                Tools
+              </p>
+              <nav
+                aria-label="Footer tools navigation"
+                className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2"
+              >
+                <Link href="/tools/word-counter" className="underline-offset-2 transition-colors hover:text-text hover:underline">Word Counter</Link>
+                <Link href="/tools/reading-time-calculator" className="underline-offset-2 transition-colors hover:text-text hover:underline">Reading Time</Link>
+                <Link href="/tools/character-counter" className="underline-offset-2 transition-colors hover:text-text hover:underline">Character Counter</Link>
+                <Link href="/tools/case-converter" className="underline-offset-2 transition-colors hover:text-text hover:underline">Case Converter</Link>
+                <Link href="/tools/lorem-ipsum-generator" className="underline-offset-2 transition-colors hover:text-text hover:underline">Lorem Ipsum</Link>
+              </nav>
+            </div>
+
+            {/* Site links row */}
+            <div className="mb-4">
+              <p className="mb-2 text-center text-[11px] font-semibold uppercase tracking-widest text-text-secondary/50">
+                Company
+              </p>
+              <nav
+                aria-label="Footer site navigation"
+                className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2"
+              >
+                <Link href="/" className="underline-offset-2 transition-colors hover:text-text hover:underline">Home</Link>
+                <Link href="/tools" className="underline-offset-2 transition-colors hover:text-text hover:underline">All Tools</Link>
+                <Link href="/about" className="underline-offset-2 transition-colors hover:text-text hover:underline">About</Link>
+                <Link href="/contact" className="underline-offset-2 transition-colors hover:text-text hover:underline">Contact</Link>
+              </nav>
+            </div>
+
+            {/* Legal row */}
+            <div className="mb-5">
+              <p className="mb-2 text-center text-[11px] font-semibold uppercase tracking-widest text-text-secondary/50">
+                Legal
+              </p>
+              <nav
+                aria-label="Footer legal navigation"
+                className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2"
+              >
+                <Link href="/privacy-policy" className="underline-offset-2 transition-colors hover:text-text hover:underline">Privacy Policy</Link>
+                <Link href="/terms-of-service" className="underline-offset-2 transition-colors hover:text-text hover:underline">Terms of Service</Link>
+                <Link href="/disclaimer" className="underline-offset-2 transition-colors hover:text-text hover:underline">Disclaimer</Link>
+              </nav>
+            </div>
+
+            <p className="text-center text-xs text-text-secondary/60">
+              &copy; {new Date().getFullYear()} PickBlend. All rights reserved. Free writing tools — 100% private, no sign-up required.
             </p>
-            <nav
-              aria-label="Footer navigation"
-              className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2"
-            >
-              <Link
-                href="/"
-                className="underline-offset-2 transition-colors hover:text-text hover:underline"
-              >
-                Home
-              </Link>
-              <Link
-                href="/about"
-                className="underline-offset-2 transition-colors hover:text-text hover:underline"
-              >
-                About
-              </Link>
-              <Link
-                href="/contact"
-                className="underline-offset-2 transition-colors hover:text-text hover:underline"
-              >
-                Contact
-              </Link>
-              <Link
-                href="/tools/word-counter"
-                className="underline-offset-2 transition-colors hover:text-text hover:underline"
-              >
-                Word Counter
-              </Link>
-              <Link
-                href="/tools/reading-time-calculator"
-                className="underline-offset-2 transition-colors hover:text-text hover:underline"
-              >
-                Reading Time
-              </Link>
-            </nav>
           </div>
         </footer>
       </body>

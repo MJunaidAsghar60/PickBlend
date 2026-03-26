@@ -10,6 +10,9 @@ import {
   Wrench,
   Type,
   Clock,
+  Hash,
+  CaseSensitive,
+  FileText,
   Home,
   Users,
   Mail,
@@ -28,6 +31,24 @@ const tools = [
     href: "/tools/reading-time-calculator",
     icon: Clock,
     description: "Reading & speaking time estimates",
+  },
+  {
+    name: "Character Counter",
+    href: "/tools/character-counter",
+    icon: Hash,
+    description: "Count chars & check platform limits",
+  },
+  {
+    name: "Text Case Converter",
+    href: "/tools/case-converter",
+    icon: CaseSensitive,
+    description: "UPPER, lower, Title, camelCase & more",
+  },
+  {
+    name: "Lorem Ipsum Generator",
+    href: "/tools/lorem-ipsum-generator",
+    icon: FileText,
+    description: "Generate placeholder text instantly",
   },
 ];
 
@@ -167,10 +188,16 @@ export default function Navbar() {
                     </Link>
                   );
                 })}
-                <div className="mt-2 border-t border-border pt-2 px-3 pb-1">
+                <div className="mt-2 border-t border-border pt-2 px-3 pb-1 flex items-center justify-between">
                   <p className="text-xs text-text-secondary/50 italic">
                     More tools coming soon...
                   </p>
+                  <Link
+                    href="/tools"
+                    className="text-xs font-semibold text-primary hover:underline underline-offset-2"
+                  >
+                    View all →
+                  </Link>
                 </div>
               </div>
             )}
@@ -265,9 +292,12 @@ export default function Navbar() {
                       </Link>
                     );
                   })}
-                  <p className="px-3 py-2 text-xs italic text-text-secondary/50">
-                    More tools coming soon...
-                  </p>
+                  <Link
+                    href="/tools"
+                    className="flex items-center gap-3 rounded-xl px-3 py-2 text-xs font-semibold text-primary hover:bg-primary/5 transition-colors"
+                  >
+                    View all tools →
+                  </Link>
                 </div>
               )}
             </div>
