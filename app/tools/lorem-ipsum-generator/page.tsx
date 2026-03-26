@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     url: `${BASE_URL}/tools/lorem-ipsum-generator`,
     images: [
       {
-        url: `${BASE_URL}/og/home.png`,
+        url: `${BASE_URL}/og/og-lorem-ipsum.png`,
         width: 1200,
         height: 630,
         alt: "Free Lorem Ipsum Generator by PickBlend",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "Free Lorem Ipsum Generator — Placeholder Text | PickBlend",
     description:
       "Generate placeholder text by paragraphs, sentences, or words instantly. Supports HTML format. Perfect for web design mockups, app development, and layout testing.",
-    images: [`${BASE_URL}/og/home.png`],
+    images: [`${BASE_URL}/og/og-lorem-ipsum.png`],
   },
   alternates: {
     canonical: `${BASE_URL}/tools/lorem-ipsum-generator`,

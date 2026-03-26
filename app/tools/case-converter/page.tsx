@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     url: `${BASE_URL}/tools/case-converter`,
     images: [
       {
-        url: `${BASE_URL}/og/home.png`,
+        url: `${BASE_URL}/og/og-case-converter.png`,
         width: 1200,
         height: 630,
         alt: "Free Text Case Converter by PickBlend",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "Free Text Case Converter — UPPER, lower, Title Case | PickBlend",
     description:
       "Convert text to uppercase, lowercase, title case, sentence case, camelCase, snake_case, kebab-case and more — instantly, no sign-up required.",
-    images: [`${BASE_URL}/og/home.png`],
+    images: [`${BASE_URL}/og/og-case-converter.png`],
   },
   alternates: {
     canonical: `${BASE_URL}/tools/case-converter`,

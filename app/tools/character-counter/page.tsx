@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     url: `${BASE_URL}/tools/character-counter`,
     images: [
       {
-        url: `${BASE_URL}/og/home.png`,
+        url: `${BASE_URL}/og/og-character-counter.png`,
         width: 1200,
         height: 630,
         alt: "Free Character Counter Tool by PickBlend",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: "Free Character Counter — Count Characters Online | PickBlend",
     description:
       "Count characters with and without spaces instantly. Check Twitter, Instagram, meta description and SMS character limits in real time. 100% free and private.",
-    images: [`${BASE_URL}/og/home.png`],
+    images: [`${BASE_URL}/og/og-character-counter.png`],
   },
   alternates: {
     canonical: `${BASE_URL}/tools/character-counter`,
