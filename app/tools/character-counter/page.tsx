@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import CharacterCounter from "@/components/CharacterCounter";
 import CharacterCounterSEO from "@/components/CharacterCounterSEO";
 
-const BASE_URL = "https://www.pickblend.com";
+const BASE_URL = "https://pickblend.com";
 
 export const metadata: Metadata = {
   title: "Character Counter — Count Characters Online Free | PickBlend",

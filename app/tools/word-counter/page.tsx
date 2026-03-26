@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import WordCounter from "@/components/WordCounter";
 import SEOContent from "@/components/SEOContent";
 
-const BASE_URL = "https://www.pickblend.com";
+const BASE_URL = "https://pickblend.com";
 
 export const metadata: Metadata = {
   title:

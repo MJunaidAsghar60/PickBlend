@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: "Contact PickBlend — Get in Touch",
     description:
       "Have a question or suggestion for PickBlend? We'd love to hear from you. Contact our team about our free writing tools.",
-    url: "https://www.pickblend.com/contact",
+    url: "https://pickblend.com/contact",
     type: "website",
     locale: "en_US",
     siteName: "PickBlend",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   authors: [{ name: "PickBlend" }],
   alternates: {
-    canonical: "https://www.pickblend.com/contact",
+    canonical: "https://pickblend.com/contact",
   },
   robots: {
     index: true,
@@ -39,7 +39,7 @@ function ContactPageJsonLd() {
     "@context": "https://schema.org",
     "@type": "ContactPage",
     name: "Contact PickBlend",
-    url: "https://www.pickblend.com/contact",
+    url: "https://pickblend.com/contact",
     description:
       "Contact the PickBlend team with questions or suggestions about our free writing tools.",
   };

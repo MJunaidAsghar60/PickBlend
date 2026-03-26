@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     title: "About PickBlend — Free Writing Tools for Everyone",
     description:
       "PickBlend builds free, privacy-first writing tools for writers, students, and creators. No sign-ups, no ads blocking your work, no data sent to servers.",
-    url: "https://www.pickblend.com/about",
+    url: "https://pickblend.com/about",
   },
   twitter: {
     card: "summary_large_image",
   },
   alternates: {
-    canonical: "https://www.pickblend.com/about",
+    canonical: "https://pickblend.com/about",
   },
   robots: {
     index: true,

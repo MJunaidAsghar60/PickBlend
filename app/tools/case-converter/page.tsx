@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import CaseConverter from "@/components/CaseConverter";
 import CaseConverterSEO from "@/components/CaseConverterSEO";
 
-const BASE_URL = "https://www.pickblend.com";
+const BASE_URL = "https://pickblend.com";
 
 export const metadata: Metadata = {
   title: "Text Case Converter — UPPER, lower, Title, Sentence Case | PickBlend",

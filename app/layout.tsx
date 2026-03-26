@@ -10,7 +10,7 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const BASE_URL = "https://www.pickblend.com";
+const BASE_URL = "https://pickblend.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),

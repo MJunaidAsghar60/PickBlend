@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ReadingTimeCalculator from "@/components/ReadingTimeCalculator";
 import ReadingTimeSEO from "@/components/ReadingTimeSEO";
 
-const BASE_URL = "https://www.pickblend.com";
+const BASE_URL = "https://pickblend.com";
 
 export const metadata: Metadata = {
   title:

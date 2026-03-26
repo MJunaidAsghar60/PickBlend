@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import LoremIpsumGenerator from "@/components/LoremIpsumGenerator";
 import LoremIpsumSEO from "@/components/LoremIpsumSEO";
 
-const BASE_URL = "https://www.pickblend.com";
+const BASE_URL = "https://pickblend.com";
 
 export const metadata: Metadata = {
   title: "Lorem Ipsum Generator — Free Placeholder Text | PickBlend",

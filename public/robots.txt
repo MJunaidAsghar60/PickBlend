@@ -7,4 +7,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://www.pickblend.com/sitemap.xml
+Sitemap: https://pickblend.com/sitemap.xml
