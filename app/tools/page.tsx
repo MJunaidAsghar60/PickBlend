@@ -126,11 +126,11 @@ const liveTools = [
 ];
 
 const comingSoonTools = [
-  "Grammar Checker",
-  "Readability Score",
-  "Plagiarism Checker",
-  "Text Diff Checker",
-  "Punctuation Checker",
+  { name: "Sentence Counter", href: "/tools/sentence-counter", description: "Count sentences and check average length" },
+  { name: "Readability Score", href: "/tools/readability-score", description: "Flesch Reading Ease & grade level analysis" },
+  { name: "Word Frequency Counter", href: "/tools/word-frequency", description: "Analyse word usage and keyword density" },
+  { name: "Paragraph Counter", href: "/tools/paragraph-counter", description: "Count paragraphs and check structure" },
+  { name: "Text Repeater", href: "/tools/text-repeater", description: "Repeat any text multiple times instantly" },
 ];
 
 export default function ToolsPage() {
@@ -205,19 +205,20 @@ export default function ToolsPage() {
               Coming Soon
             </h2>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {comingSoonTools.map((name) => (
-                <div
-                  key={name}
-                  className="flex items-center gap-3 rounded-2xl border border-dashed border-border bg-surface-alt/60 px-5 py-4"
+              {comingSoonTools.map((tool) => (
+                <Link
+                  key={tool.href}
+                  href={tool.href}
+                  className="flex items-center gap-3 rounded-2xl border border-dashed border-border bg-surface-alt/60 px-5 py-4 transition-colors hover:border-primary/30 hover:bg-surface-alt"
                 >
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-surface-hover">
                     <Clock className="h-5 w-5 text-text-secondary/40" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-text/60">{name}</p>
-                    <p className="text-xs text-text-secondary/50">Coming soon</p>
+                    <p className="text-sm font-semibold text-text/60">{tool.name}</p>
+                    <p className="text-xs text-text-secondary/50">{tool.description}</p>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
