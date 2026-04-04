@@ -8,6 +8,8 @@ import {
   FileText,
   Clock,
   ArrowRight,
+  AlignLeft,
+  Repeat,
 } from "lucide-react";
 
 const BASE_URL = "https://pickblend.com";
@@ -123,14 +125,32 @@ const liveTools = [
     badgeColor: "bg-accent-green/10 text-accent-green",
     cta: "Generate Text",
   },
+  {
+    name: "Sentence Counter",
+    href: "/tools/sentence-counter",
+    icon: AlignLeft,
+    description:
+      "Count sentences in real time with average sentence length, longest and shortest sentence analysis.",
+    badge: "New",
+    badgeColor: "bg-accent-green/10 text-accent-green",
+    cta: "Count Sentences Free",
+  },
+  {
+    name: "Text Repeater",
+    href: "/tools/text-repeater",
+    icon: Repeat,
+    description:
+      "Repeat any word, phrase or text block multiple times with custom separator, prefix, suffix and numbering.",
+    badge: "New",
+    badgeColor: "bg-accent-green/10 text-accent-green",
+    cta: "Repeat Text Free",
+  },
 ];
 
 const comingSoonTools = [
-  { name: "Sentence Counter", href: "/tools/sentence-counter", description: "Count sentences and check average length" },
   { name: "Readability Score", href: "/tools/readability-score", description: "Flesch Reading Ease & grade level analysis" },
   { name: "Word Frequency Counter", href: "/tools/word-frequency", description: "Analyse word usage and keyword density" },
   { name: "Paragraph Counter", href: "/tools/paragraph-counter", description: "Count paragraphs and check structure" },
-  { name: "Text Repeater", href: "/tools/text-repeater", description: "Repeat any text multiple times instantly" },
 ];
 
 export default function ToolsPage() {
