@@ -10,6 +10,7 @@ import {
   ArrowRight,
   AlignLeft,
   Repeat,
+  BarChart3,
 } from "lucide-react";
 
 const BASE_URL = "https://pickblend.com";
@@ -145,10 +146,19 @@ const liveTools = [
     badgeColor: "bg-accent-green/10 text-accent-green",
     cta: "Repeat Text Free",
   },
+  {
+    name: "Readability Score Checker",
+    href: "/tools/readability-score",
+    icon: BarChart3,
+    description:
+      "Check Flesch Reading Ease, grade level and 6 readability scores instantly. Perfect for writers, students and content creators.",
+    badge: "New",
+    badgeColor: "bg-accent-green/10 text-accent-green",
+    cta: "Check Readability Free →",
+  },
 ];
 
 const comingSoonTools = [
-  { name: "Readability Score", href: "/tools/readability-score", description: "Flesch Reading Ease & grade level analysis" },
   { name: "Word Frequency Counter", href: "/tools/word-frequency", description: "Analyse word usage and keyword density" },
   { name: "Paragraph Counter", href: "/tools/paragraph-counter", description: "Count paragraphs and check structure" },
 ];
