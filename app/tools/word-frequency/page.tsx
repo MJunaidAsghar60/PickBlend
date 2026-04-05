@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import WordFrequency from "@/components/WordFrequency";
 import WordFrequencySEO from "@/components/WordFrequencySEO";
 
 const BASE_URL = "https://pickblend.com";
@@ -111,23 +112,7 @@ export default function WordFrequencyPage() {
             <h1 className="text-3xl font-extrabold tracking-tight text-text sm:text-4xl lg:text-5xl">
               Free Word Frequency Counter — Analyze Word Usage in Any Text
             </h1>
-            <div className="mt-10 rounded-2xl border border-border bg-surface p-8 text-center shadow-sm">
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
-                <svg className="h-7 w-7 text-primary" fill="none" viewBox="0 0 24 24" strokeWidth={1.8} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                </svg>
-              </div>
-              <h2 className="text-xl font-bold text-text">Word Frequency Counter — Coming Soon</h2>
-              <p className="mt-3 text-text-secondary">
-                This tool is coming soon. Want to be notified when it launches?
-              </p>
-              <Link
-                href="/contact"
-                className="mt-5 inline-flex items-center gap-1.5 rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-primary/90"
-              >
-                Send us a message →
-              </Link>
-            </div>
+            <WordFrequency />
           </div>
         </div>
       </main>

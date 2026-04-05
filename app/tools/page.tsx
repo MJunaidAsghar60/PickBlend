@@ -11,6 +11,8 @@ import {
   AlignLeft,
   Repeat,
   BarChart3,
+  TrendingUp,
+  Pilcrow,
 } from "lucide-react";
 
 const BASE_URL = "https://pickblend.com";
@@ -156,12 +158,29 @@ const liveTools = [
     badgeColor: "bg-accent-green/10 text-accent-green",
     cta: "Check Readability Free →",
   },
+  {
+    name: "Word Frequency Counter",
+    href: "/tools/word-frequency",
+    icon: TrendingUp,
+    description:
+      "Analyze how often each word appears in your text. Filter stop words, set minimum word length, and export results. Perfect for SEO keyword analysis.",
+    badge: "New",
+    badgeColor: "bg-accent-green/10 text-accent-green",
+    cta: "Analyze Word Frequency →",
+  },
+  {
+    name: "Paragraph Counter",
+    href: "/tools/paragraph-counter",
+    icon: Pilcrow,
+    description:
+      "Count paragraphs and get detailed stats for each one — words, sentences and characters per paragraph. Perfect for long-form writers.",
+    badge: "New",
+    badgeColor: "bg-accent-green/10 text-accent-green",
+    cta: "Count Paragraphs Free →",
+  },
 ];
 
-const comingSoonTools = [
-  { name: "Word Frequency Counter", href: "/tools/word-frequency", description: "Analyse word usage and keyword density" },
-  { name: "Paragraph Counter", href: "/tools/paragraph-counter", description: "Count paragraphs and check structure" },
-];
+const comingSoonTools: { name: string; href: string; description: string }[] = [];
 
 export default function ToolsPage() {
   return (
@@ -231,26 +250,30 @@ export default function ToolsPage() {
             </div>
 
             {/* ========== COMING SOON ========== */}
-            <h2 className="mb-6 mt-12 text-lg font-bold uppercase tracking-wider text-text-secondary">
-              Coming Soon
-            </h2>
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {comingSoonTools.map((tool) => (
-                <Link
-                  key={tool.href}
-                  href={tool.href}
-                  className="flex items-center gap-3 rounded-2xl border border-dashed border-border bg-surface-alt/60 px-5 py-4 transition-colors hover:border-primary/30 hover:bg-surface-alt"
-                >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-surface-hover">
-                    <Clock className="h-5 w-5 text-text-secondary/40" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-text/60">{tool.name}</p>
-                    <p className="text-xs text-text-secondary/50">{tool.description}</p>
-                  </div>
-                </Link>
-              ))}
-            </div>
+            {comingSoonTools.length > 0 && (
+              <>
+                <h2 className="mb-6 mt-12 text-lg font-bold uppercase tracking-wider text-text-secondary">
+                  Coming Soon
+                </h2>
+                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                  {comingSoonTools.map((tool) => (
+                    <Link
+                      key={tool.href}
+                      href={tool.href}
+                      className="flex items-center gap-3 rounded-2xl border border-dashed border-border bg-surface-alt/60 px-5 py-4 transition-colors hover:border-primary/30 hover:bg-surface-alt"
+                    >
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-surface-hover">
+                        <Clock className="h-5 w-5 text-text-secondary/40" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold text-text/60">{tool.name}</p>
+                        <p className="text-xs text-text-secondary/50">{tool.description}</p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         </section>
       </main>
