@@ -17,6 +17,7 @@ import {
   Users,
   Mail,
   Sparkles,
+  BookOpen,
 } from "lucide-react";
 
 const tools = [
@@ -52,11 +53,17 @@ const tools = [
   },
 ];
 
-const navLinks = [
+const preToolLinks = [
   { name: "Home", href: "/", icon: Home },
+];
+
+const postToolLinks = [
+  { name: "Blog", href: "/blog", icon: BookOpen },
   { name: "About Us", href: "/about", icon: Users },
   { name: "Contact", href: "/contact", icon: Mail },
 ];
+
+const mobileNavLinks = [...preToolLinks, ...postToolLinks];
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -110,8 +117,8 @@ export default function Navbar() {
 
         {/* ===== Desktop Nav ===== */}
         <div className="hidden items-center gap-1 md:flex">
-          {/* Regular nav links */}
-          {navLinks.map((link) => (
+          {/* Pre-tools nav links (Home) */}
+          {preToolLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
@@ -202,6 +209,24 @@ export default function Navbar() {
               </div>
             )}
           </div>
+
+          {/* Post-tools nav links (Blog, About Us, Contact) */}
+          {postToolLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`relative rounded-lg px-3.5 py-2 text-sm font-medium transition-colors ${
+                isActive(link.href)
+                  ? "text-primary"
+                  : "text-text-secondary hover:bg-surface-hover hover:text-text"
+              }`}
+            >
+              {link.name}
+              {isActive(link.href) && (
+                <span className="absolute bottom-0 left-1/2 h-0.5 w-5 -translate-x-1/2 rounded-full bg-primary" />
+              )}
+            </Link>
+          ))}
         </div>
 
         {/* ===== Mobile Hamburger ===== */}
@@ -231,7 +256,7 @@ export default function Navbar() {
           {/* Panel */}
           <div className="relative mx-4 mt-2 animate-fade-in rounded-2xl border border-border bg-white p-3 shadow-2xl">
             {/* Nav Links */}
-            {navLinks.map((link) => {
+            {mobileNavLinks.map((link) => {
               const Icon = link.icon;
               return (
                 <Link

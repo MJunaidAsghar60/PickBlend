@@ -152,6 +152,7 @@ export default function RootLayout({
               >
                 <Link href="/" className="underline-offset-2 transition-colors hover:text-text hover:underline">Home</Link>
                 <Link href="/tools" className="underline-offset-2 transition-colors hover:text-text hover:underline">All Tools</Link>
+                <Link href="/blog" className="underline-offset-2 transition-colors hover:text-text hover:underline">Blog</Link>
                 <Link href="/about" className="underline-offset-2 transition-colors hover:text-text hover:underline">About</Link>
                 <Link href="/contact" className="underline-offset-2 transition-colors hover:text-text hover:underline">Contact</Link>
               </nav>
