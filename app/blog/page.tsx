@@ -61,6 +61,16 @@ function PageJsonLd() {
 
 const posts = [
   {
+    slug: "how-many-words-in-a-paragraph",
+    category: "Writing Tips",
+    title: "How Many Words Are in a Paragraph?",
+    excerpt:
+      "A typical paragraph contains 100 to 200 words — but the ideal length depends on what you are writing. Here is the complete breakdown for every writing type.",
+    readingTime: "7 min read",
+    date: "April 6, 2026",
+    dateISO: "2026-04-06",
+  },
+  {
     slug: "how-long-does-it-take-to-read-1400-words",
     category: "Writing Tips",
     title: "How Long Does It Take to Read 1,400 Words?",
