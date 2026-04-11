@@ -61,6 +61,16 @@ function PageJsonLd() {
 
 const posts = [
   {
+    slug: "character-limits-for-every-platform-2026",
+    category: "Content Writing",
+    title: "Character Limits for Every Platform in 2026 — The Complete Guide",
+    excerpt:
+      "Every platform has different character limits in 2026 — and they change more often than you think. From social media posts to meta tags, SMS and email subject lines — all limits in one place.",
+    readingTime: "8 min read",
+    date: "April 7, 2026",
+    dateISO: "2026-04-07",
+  },
+  {
     slug: "how-many-words-in-a-paragraph",
     category: "Writing Tips",
     title: "How Many Words Are in a Paragraph?",
