@@ -61,6 +61,16 @@ function PageJsonLd() {
 
 const posts = [
   {
+    slug: "camelcase-vs-snake-case",
+    category: "Developer Tools",
+    title: "camelCase vs snake_case — When to Use Each (Complete Guide for Developers)",
+    excerpt:
+      "camelCase or snake_case? The answer depends on the language, framework and context. This complete guide covers every naming convention with language-specific rules, real code examples and a quick reference table.",
+    readingTime: "9 min read",
+    date: "April 8, 2026",
+    dateISO: "2026-04-08",
+  },
+  {
     slug: "character-limits-for-every-platform-2026",
     category: "Content Writing",
     title: "Character Limits for Every Platform in 2026 — The Complete Guide",
