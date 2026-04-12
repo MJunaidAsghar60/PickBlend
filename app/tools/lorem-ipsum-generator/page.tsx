@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import LoremIpsumGenerator from "@/components/LoremIpsumGenerator";
+import LoremIpsumGeneratorIntro from "@/components/LoremIpsumGeneratorIntro";
 import LoremIpsumSEO from "@/components/LoremIpsumSEO";
 
 const BASE_URL = "https://pickblend.com";
@@ -190,6 +191,9 @@ export default function LoremIpsumGeneratorPage() {
       <main>
         <LoremIpsumGenerator />
       </main>
+      <section>
+        <LoremIpsumGeneratorIntro />
+      </section>
       <article>
         <LoremIpsumSEO />
       </article>

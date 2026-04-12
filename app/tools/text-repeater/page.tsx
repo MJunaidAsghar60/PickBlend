@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import TextRepeater from "@/components/TextRepeater";
+import TextRepeaterIntro from "@/components/TextRepeaterIntro";
 import TextRepeaterSEO from "@/components/TextRepeaterSEO";
 
 const BASE_URL = "https://pickblend.com";
@@ -101,6 +102,9 @@ export default function TextRepeaterPage() {
       <main>
         <TextRepeater />
       </main>
+      <section>
+        <TextRepeaterIntro />
+      </section>
       <article>
         <TextRepeaterSEO />
       </article>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CharacterCounter from "@/components/CharacterCounter";
+import CharacterCounterIntro from "@/components/CharacterCounterIntro";
 import CharacterCounterSEO from "@/components/CharacterCounterSEO";
 
 const BASE_URL = "https://pickblend.com";
@@ -182,6 +183,9 @@ export default function CharacterCounterPage() {
       <main>
         <CharacterCounter />
       </main>
+      <section>
+        <CharacterCounterIntro />
+      </section>
       <article>
         <CharacterCounterSEO />
       </article>

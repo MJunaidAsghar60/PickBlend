@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ParagraphCounter from "@/components/ParagraphCounter";
+import ParagraphCounterIntro from "@/components/ParagraphCounterIntro";
 import ParagraphCounterSEO from "@/components/ParagraphCounterSEO";
 
 const BASE_URL = "https://pickblend.com";
@@ -116,6 +117,9 @@ export default function ParagraphCounterPage() {
           </div>
         </div>
       </main>
+      <section>
+        <ParagraphCounterIntro />
+      </section>
       <article>
         <ParagraphCounterSEO />
       </article>

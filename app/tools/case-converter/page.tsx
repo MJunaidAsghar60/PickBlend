@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CaseConverter from "@/components/CaseConverter";
+import CaseConverterIntro from "@/components/CaseConverterIntro";
 import CaseConverterSEO from "@/components/CaseConverterSEO";
 
 const BASE_URL = "https://pickblend.com";
@@ -188,6 +189,9 @@ export default function CaseConverterPage() {
       <main>
         <CaseConverter />
       </main>
+      <section>
+        <CaseConverterIntro />
+      </section>
       <article>
         <CaseConverterSEO />
       </article>

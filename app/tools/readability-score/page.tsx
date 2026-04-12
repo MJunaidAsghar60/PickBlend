@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ReadabilityScore from "@/components/ReadabilityScore";
+import ReadabilityScoreIntro from "@/components/ReadabilityScoreIntro";
 import ReadabilityScoreSEO from "@/components/ReadabilityScoreSEO";
 
 const BASE_URL = "https://pickblend.com";
@@ -116,6 +117,9 @@ export default function ReadabilityScorePage() {
           </div>
         </div>
       </main>
+      <section>
+        <ReadabilityScoreIntro />
+      </section>
       <article>
         <ReadabilityScoreSEO />
       </article>

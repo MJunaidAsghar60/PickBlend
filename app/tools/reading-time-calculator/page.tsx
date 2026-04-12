@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ReadingTimeCalculator from "@/components/ReadingTimeCalculator";
+import ReadingTimeCalculatorIntro from "@/components/ReadingTimeCalculatorIntro";
 import ReadingTimeSEO from "@/components/ReadingTimeSEO";
 
 const BASE_URL = "https://pickblend.com";
@@ -175,6 +176,9 @@ export default function ReadingTimeCalculatorPage() {
       <main>
         <ReadingTimeCalculator />
       </main>
+      <section>
+        <ReadingTimeCalculatorIntro />
+      </section>
       <article>
         <ReadingTimeSEO />
       </article>

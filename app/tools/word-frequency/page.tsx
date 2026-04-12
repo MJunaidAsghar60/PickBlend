@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import WordFrequency from "@/components/WordFrequency";
+import WordFrequencyIntro from "@/components/WordFrequencyIntro";
 import WordFrequencySEO from "@/components/WordFrequencySEO";
 
 const BASE_URL = "https://pickblend.com";
@@ -116,6 +117,9 @@ export default function WordFrequencyPage() {
           </div>
         </div>
       </main>
+      <section>
+        <WordFrequencyIntro />
+      </section>
       <article>
         <WordFrequencySEO />
       </article>

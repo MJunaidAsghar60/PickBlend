@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import SentenceCounter from "@/components/SentenceCounter";
+import SentenceCounterIntro from "@/components/SentenceCounterIntro";
 import SentenceCounterSEO from "@/components/SentenceCounterSEO";
 
 const BASE_URL = "https://pickblend.com";
@@ -101,6 +102,9 @@ export default function SentenceCounterPage() {
       <main>
         <SentenceCounter />
       </main>
+      <section>
+        <SentenceCounterIntro />
+      </section>
       <article>
         <SentenceCounterSEO />
       </article>

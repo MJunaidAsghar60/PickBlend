@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import WordCounter from "@/components/WordCounter";
+import WordCounterIntro from "@/components/WordCounterIntro";
 import SEOContent from "@/components/SEOContent";
 
 const BASE_URL = "https://pickblend.com";
@@ -237,6 +238,9 @@ export default function WordCounterPage() {
       <main>
         <WordCounter />
       </main>
+      <section>
+        <WordCounterIntro />
+      </section>
       <article>
         <SEOContent />
       </article>
