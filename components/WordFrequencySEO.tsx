@@ -169,24 +169,28 @@ export default function WordFrequencySEO() {
           <div className="space-y-4">
             {[
               {
-                q: "What is a good keyword density for SEO?",
-                a: "Most SEO professionals target 1–2% keyword density for primary keywords. Going above 3–4% risks appearing over-optimised to search engines. Natural, helpful writing rarely exceeds 2% for any single phrase organically.",
+                q: "What is keyword density and why does it matter for SEO in 2026?",
+                a: "Keyword density is the percentage of times a specific keyword appears in your text relative to the total word count. In 2026 SEO best practice recommends keeping primary keyword density between 1 and 2 percent — meaning a target keyword should appear roughly once every 50 to 100 words. Keyword density above 3 percent risks being classified as keyword stuffing by search engine algorithms which can result in ranking penalties rather than ranking improvements. Our word frequency counter shows the exact frequency percentage for every word in your text making it a practical keyword density checker for SEO content writers.",
               },
               {
-                q: "Should I include stop words in frequency analysis?",
-                a: "For SEO and content analysis, filter out stop words (the, a, is, and, etc.) to focus on meaningful content words. For linguistic or academic research — such as studying an author's writing style — including stop words can reveal interesting patterns.",
+                q: "How do I find the most used words in my text?",
+                a: "Finding the most used words in any text is instant with our word frequency counter. Paste your content into the tool and a ranked frequency table appears showing every word sorted by how often it appears along with its count, frequency percentage and a visual bar proportional to its usage. Enable the stop words filter to remove common words like the, and and is so only meaningful content words appear in the results. The vocabulary richness percentage shows what proportion of your total words are unique — a useful indicator of writing variety and depth.",
               },
               {
-                q: "How many unique words should a blog post have?",
-                a: "There's no universal rule, but a well-written 1,000-word blog post typically uses 300–500 unique words. A very high unique word count indicates rich, varied vocabulary; a low count may suggest overuse of specific terms. Word frequency analysis helps you find the balance.",
+                q: "What are stop words and should I filter them out?",
+                a: "Stop words are high-frequency function words that carry little meaningful semantic information on their own — words like the, a, and, is, in, of, to and for. In word frequency analysis stop words dominate every text regardless of topic and obscure the meaningful vocabulary patterns you actually want to see. Filtering stop words reveals your true content keywords — the nouns, verbs and adjectives that define what your text is actually about. Our word frequency counter includes a toggle to exclude 80 common English stop words so you can switch instantly between seeing all words and seeing only meaningful content vocabulary.",
               },
               {
-                q: "Can word frequency analysis improve my writing?",
-                a: "Yes — it's one of the most practical self-editing tools available. By revealing which words you overuse, it prompts you to vary your vocabulary. By showing the top content words, it confirms whether your text truly covers the topics you intend to address.",
+                q: "How can word frequency analysis improve SEO content?",
+                a: "Word frequency analysis improves SEO content by revealing exactly which keywords are present and how often they appear. You can verify that your primary target keyword appears at a healthy density of 1 to 2 percent, check that semantically related secondary keywords are present to satisfy search intent, identify words that are overused and need variation and confirm that your content covers the topic vocabulary comprehensively. Paste any piece of content into our word frequency counter before publishing to catch keyword stuffing, identify thin vocabulary and verify your SEO keyword distribution is balanced across the full text.",
               },
               {
-                q: "Is this word frequency counter free?",
-                a: "Yes, completely free. No account, no sign-up, no usage limits. All processing runs locally in your browser — your text is never sent to any server.",
+                q: "What is vocabulary richness and how do I improve it?",
+                a: "Vocabulary richness — also called type-token ratio — measures the proportion of unique words relative to total words. A text with 300 unique words out of 600 total words has a vocabulary richness of 50 percent. Higher vocabulary richness signals more varied engaging writing to both human readers and search engines. Richness below 25 percent often indicates repetitive writing that overuses the same words. To improve vocabulary richness use synonyms for frequently repeated words, vary your sentence openings and expand your descriptive vocabulary. Our word frequency counter calculates and displays your vocabulary richness percentage automatically in the summary stats bar.",
+              },
+              {
+                q: "Can word frequency analysis help identify plagiarism risks?",
+                a: "Word frequency analysis can reveal potential plagiarism risks by identifying unusual concentrations of specific rare or technical terms that may indicate copied passages. If a section of your text uses vocabulary dramatically different from the rest — particularly very formal or technical language appearing in an otherwise informal piece — it may signal content borrowed from another source. More directly word frequency analysis helps with originality by identifying overused phrases and encouraging writers to rephrase repeated content in their own words. For thorough plagiarism detection pair our word frequency counter with a dedicated plagiarism checking service.",
               },
             ].map(({ q, a }) => (
               <div key={q} className="rounded-2xl border border-border bg-white p-6 shadow-sm">

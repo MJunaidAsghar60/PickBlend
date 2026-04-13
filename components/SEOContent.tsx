@@ -350,28 +350,28 @@ export default function SEOContent() {
           </h2>
           <div className="mt-4 space-y-5">
             <FaqItem
-              q="How does the word counter tool work?"
-              a="Simply type or paste your text into the editor. The tool instantly analyzes your content and displays word count, character count, sentence count, paragraph count, estimated reading time, speaking time, and keyword density — all in real time with no page reload required."
+              q="How do I count words in a document for free?"
+              a="Counting words in a document for free is simple with an online word counter tool. Paste your text directly into the editor and your word count updates instantly in real time — no sign-up, no file upload and no software to install. Beyond just word count you also get character count, sentence count, paragraph count, reading time and keyword density analysis all in one place. Our free word counter works on any device directly in your browser and automatically saves your work locally so you never lose your progress."
             />
             <FaqItem
-              q="Is this word counter tool free to use?"
-              a="Yes, this word counter is 100% free with no sign-up or registration required. All features including keyword density analysis, reading time estimation, and text case conversion are available at no cost."
+              q="How many words is a 5-minute speech?"
+              a="A 5-minute speech contains approximately 650 to 750 words at an average speaking pace of 130 words per minute. Speaking faster at around 150 words per minute pushes a 5-minute speech closer to 750 words. Speaking pace varies by context — conversational delivery runs faster than a formal presentation. Factors like pauses, emphasis and audience interaction also affect total speaking time. Use our free word counter alongside the reading time calculator to get precise speaking time estimates for any word count before your next speech or presentation."
             />
             <FaqItem
-              q="What reading speed is used for the time estimates?"
-              a="Reading time is calculated at 275 words per minute (the average adult silent reading speed). Speaking time uses 130 words per minute, which matches a comfortable public speaking pace."
+              q="What is the ideal word count for a blog post?"
+              a="The ideal word count for a blog post depends on your goal. Short informational posts of 600 to 800 words work well for news and quick answers. Standard blog posts targeting SEO perform best at 1,500 to 2,500 words because they cover topics comprehensively enough to satisfy search intent. Long-form pillar content of 3,000 to 5,000 words dominates competitive keywords. Research consistently shows that posts between 1,800 and 2,200 words earn the most backlinks and social shares. Paste your draft into our word counter to track your progress toward your target word count in real time."
             />
             <FaqItem
-              q="Can I use this tool to check keyword density for SEO?"
-              a="Absolutely. The keyword density panel displays your top 10 most-used words along with their count and percentage. Use it to ensure your target keywords are present without over-stuffing."
+              q="Does word count include numbers and punctuation?"
+              a="Word count includes numbers treated as individual words but does not count standalone punctuation marks. The number 2026 counts as one word. Hyphenated words like well-known typically count as a single word consistent with how Microsoft Word and Google Docs handle them. Contractions like don't count as one word. Punctuation marks like commas, periods and quotation marks do not contribute to word count. Our online word counter follows these same standard word counting conventions so results are consistent with professional writing tools."
             />
             <FaqItem
-              q="Does the tool save my text?"
-              a="Your text is stored locally in your browser via LocalStorage. It is never sent to any server. If you close the tab and return later, your text will still be there — completely private on your device."
+              q="How accurate is an online word counter?"
+              a="Online word counters are highly accurate for standard prose text. Our word counter splits text on whitespace, filters empty tokens and handles edge cases like hyphenated words, contractions and numbers consistently — matching the behavior of professional desktop word processors. Real-time updating means you always see the current accurate count as you type or edit. For most writing tasks including academic essays, blog posts and content marketing the word count will match Microsoft Word and Google Docs within one or two words."
             />
             <FaqItem
-              q="How accurate is the sentence counter?"
-              a="Sentences are detected by terminal punctuation marks (periods, exclamation marks, and question marks). It handles standard English text with high accuracy. Edge cases like abbreviations (e.g., U.S.A.) may cause slight variations."
+              q="Can I count words in multiple languages?"
+              a="Our word counter works with any language that uses spaces to separate words including English, Spanish, French, German, Portuguese and most European languages. The counter splits on whitespace which is the universal word separator in Latin-script languages. For languages like Chinese, Japanese and Korean that do not use spaces between words the character count is more meaningful than word count. The character counter on our platform provides accurate character counts for all languages and writing systems regardless of whether spaces are used."
             />
           </div>
         </section>

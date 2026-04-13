@@ -290,28 +290,28 @@ export default function ReadingTimeSEO() {
           </h2>
           <div className="mt-4 space-y-5">
             <FaqItem
-              q="What is the average reading speed for adults?"
-              a="The widely accepted average is 275 words per minute (wpm) for silent reading of English text. This figure comes from a 2019 meta-analysis by Marc Brysbaert and is used by most publishing platforms including Medium."
+              q="How long does it take to read 1000 words?"
+              a="Reading 1,000 words takes approximately 4 minutes and 12 seconds at the average adult reading speed of 238 words per minute. Slow readers at 150 words per minute take around 6 minutes 40 seconds for the same text. Fast readers at 400 words per minute finish in under 3 minutes. Content complexity also matters — technical or academic text with unfamiliar vocabulary takes longer than casual prose even at the same word count. Paste any 1,000-word text into our reading time calculator to get your personalised estimate based on actual content."
             />
             <FaqItem
-              q="How many words is a 5-minute read?"
-              a="At the average reading speed of 275 wpm, a 5-minute read is approximately 1,375 words. At a slow pace (150 wpm) it would be 750 words, and at a fast pace (450 wpm) it would be 2,250 words."
+              q="What is the average adult reading speed in 2026?"
+              a="The average adult reading speed in 2026 remains approximately 238 words per minute for silent reading according to research published in a 2019 meta-analysis of 190 studies covering 17,000 participants. College educated adults typically read faster at 250 to 300 words per minute. Trained speed readers using chunking and skimming techniques can reach 400 to 600 words per minute though comprehension often drops at higher speeds. Our reading time calculator uses 238 words per minute as the default average but allows you to adjust for faster or slower reading speeds."
             />
             <FaqItem
-              q="How do I calculate speaking time for a presentation?"
-              a="Divide your word count by your speaking pace. For a comfortable presentation, use 130 wpm. So a 2,000-word script would take about 15 minutes and 23 seconds to deliver. Our tool lets you choose from five different speaking speeds."
+              q="How do I calculate speaking time from word count?"
+              a="Calculating speaking time from word count requires dividing your total word count by your speaking pace in words per minute. At an average speaking pace of 130 words per minute a 1,300-word speech takes exactly 10 minutes. A 650-word speech takes 5 minutes. A 2,600-word speech takes 20 minutes. Speaking pace varies significantly — nervous speakers slow to 100 words per minute while confident presenters often reach 150 to 160 words per minute. Our reading time calculator handles this calculation automatically showing you both reading time and speaking time the moment you paste your text."
             />
             <FaqItem
-              q="Why does reading speed vary so much?"
-              a="Reading speed depends on text complexity, reader familiarity with the topic, font size and layout, language (native vs. second language), and whether you are skimming or reading for comprehension. Technical content averages 150–200 wpm while casual content averages 250–300 wpm."
+              q="How long should a blog post take to read?"
+              a="The ideal blog post reading time is 6 to 8 minutes according to engagement data from major publishing platforms. This reading time corresponds to roughly 1,500 to 2,000 words at average reading speed. Posts under 3 minutes feel too brief to be comprehensive while posts over 12 minutes see declining completion rates unless the content is highly technical or targeted at expert audiences. Displaying your estimated reading time at the top of a blog post sets reader expectations and reduces bounce rate. Use our reading time calculator to find and display the exact reading time for any piece of content."
             />
             <FaqItem
-              q="Is this tool free to use?"
-              a="Yes, completely free with no sign-up required. Your text is processed entirely in your browser and is never sent to any server — your content stays completely private."
+              q="What is a comfortable speaking pace for presentations?"
+              a="A comfortable speaking pace for presentations is between 120 and 150 words per minute. Professional speakers and TED Talk presenters average around 130 to 150 words per minute — fast enough to maintain energy but slow enough for the audience to absorb each point. Speaking faster than 180 words per minute sounds rushed and anxious. Speaking slower than 100 words per minute feels monotonous and loses audience attention. If your presentation script is 1,300 words and you speak at 130 words per minute you have a perfect 10-minute talk. Our speaking time calculator confirms this instantly."
             />
             <FaqItem
-              q="How many words per page?"
-              a="A standard single-spaced A4 page with 12pt font holds approximately 250 words. Double-spaced, it is about 125 words per page. Our tool shows both estimates in the results sidebar."
+              q="How many words is a 10-minute presentation?"
+              a="A 10-minute presentation contains approximately 1,100 to 1,500 words depending on your speaking pace. At a standard presentation pace of 120 words per minute a 10-minute talk requires 1,200 words. At a faster conversational pace of 150 words per minute you need 1,500 words to fill 10 minutes. Professional speakers recommend writing slightly less than you think you need because live delivery always runs longer than rehearsal due to pauses, emphasis and audience interaction. Our reading time calculator shows speaking time for multiple pace options so you can script your presentation to the exact right length."
             />
           </div>
         </section>

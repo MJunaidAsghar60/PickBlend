@@ -185,24 +185,28 @@ export default function ReadabilityScoreSEO() {
           <div className="space-y-4">
             {[
               {
-                q: "What is a good Flesch Reading Ease score for blog posts?",
-                a: "For most blog posts targeting a general audience, aim for a Flesch Reading Ease score of 60–70. This is considered 'standard' difficulty and is accessible to adults with a high school education. Marketing and consumer-facing content often targets 70–80 for even broader accessibility.",
+                q: "What is a good Flesch Reading Ease score for blog content?",
+                a: "A good Flesch Reading Ease score for blog content is between 60 and 70 which is classified as standard and suitable for general audiences. Scores of 70 to 80 are fairly easy and ideal for consumer-facing blog posts and marketing copy. Scores above 80 work well for instructional content and beginner guides. Academic and technical content typically scores between 30 and 50. The Flesch Reading Ease formula rewards shorter sentences and simpler words — the two most effective levers for improving your score. Paste any blog post into our readability score checker to instantly see your Flesch Reading Ease score alongside five other industry-standard metrics.",
               },
               {
-                q: "What Flesch-Kincaid Grade Level should I target?",
-                a: "For general web content, aim for Grade 6–8 (roughly age 11–14). This is the sweet spot for broad accessibility without seeming condescending. Academic writing typically sits at Grade 12+, and legal writing often exceeds Grade 16.",
+                q: "What is Flesch-Kincaid Grade Level and how is it calculated?",
+                a: "The Flesch-Kincaid Grade Level converts text readability into a US school grade equivalent making it easy to match content to your target audience. A score of 8.0 means the text is accessible to an average 8th grader. The formula calculates grade level using two variables — average sentence length in words and average number of syllables per word. Longer sentences and polysyllabic vocabulary increase the grade level. Most general audience online content should target a Flesch-Kincaid Grade Level of 6 to 9. News articles aim for grade 6 to 8. Academic papers typically score 12 to 16. Our readability checker calculates your Flesch-Kincaid Grade Level instantly.",
               },
               {
-                q: "Does a lower readability score mean my writing is bad?",
-                a: "No — readability scores measure difficulty, not quality. Academic papers, legal contracts, and scientific research are deliberately complex because their audiences have the expertise to handle it. The goal is to match your readability level to your target audience, not to chase a specific score.",
+                q: "How do I improve my readability score quickly?",
+                a: "Improving your readability score quickly comes down to two high-impact changes — shortening sentences and simplifying vocabulary. Breaking one 30-word sentence into two 15-word sentences significantly improves every readability metric including Flesch Reading Ease, Flesch-Kincaid Grade Level and Gunning Fog Index simultaneously. Replacing polysyllabic words with simpler alternatives also helps — use instead of utilise, show instead of demonstrate, help instead of facilitate. Shorter paragraphs improve visual readability even if they do not affect formula scores directly. Paste your text into our readability score checker to identify exactly which sentences are dragging your score down.",
               },
               {
-                q: "How can I improve my readability score?",
-                a: "The two biggest levers are sentence length and word complexity. Shorten long sentences by splitting them at conjunctions. Replace multi-syllable words with simpler alternatives where the meaning is preserved. Use active voice instead of passive voice. Break long paragraphs into shorter ones.",
+                q: "What is the Gunning Fog Index and what score should I aim for?",
+                a: "The Gunning Fog Index measures reading difficulty based on sentence length and the percentage of complex words — defined as words containing three or more syllables. The result is a grade level estimate where lower numbers indicate easier reading. A Gunning Fog score of 8 is ideal for most general audience content. Scores above 12 suggest the text is too complex for average readers and should be simplified. Scores above 17 approach academic journal complexity. The Gunning Fog Index was developed by Robert Gunning in 1952 and remains widely used in business writing, journalism education and corporate communication assessments. Our readability checker calculates your Gunning Fog score alongside five other metrics.",
               },
               {
-                q: "Is this readability checker free?",
-                a: "Yes, completely free. No account required, no sign-up, no usage limits. All calculations run in your browser — your text is never sent to any server.",
+                q: "Which readability formula should I use for my content?",
+                a: "For most content creators the Flesch Reading Ease score is the best primary metric because it ranges from 0 to 100 making it immediately intuitive — higher is easier. Use Flesch-Kincaid Grade Level as your secondary check especially if you know your target audience demographic and education level. The Gunning Fog Index is most valuable for business writing and journalism where complex word usage is a specific concern. The SMOG Index is most accurate for medical and health content but requires 30 or more sentences for reliable results. Our readability checker calculates all six formulas simultaneously so you get a complete picture without choosing just one.",
+              },
+              {
+                q: "What does SMOG Index measure and when is it most useful?",
+                a: "The SMOG Index — Simple Measure of Gobbledygook — measures readability by counting polysyllabic words across a sample of sentences and predicts the years of education required to understand a text. The SMOG Index is considered particularly accurate for health and medical writing because it focuses specifically on complex multisyllabic terminology which dominates medical content. It requires a minimum of 30 sentences for statistically reliable results — our readability checker displays a warning when your text has fewer than 30 sentences. For most general content the Flesch Reading Ease score is more practical but SMOG is the gold standard for healthcare and patient-facing medical communication.",
               },
             ].map(({ q, a }) => (
               <div key={q} className="rounded-2xl border border-border bg-white p-6 shadow-sm">

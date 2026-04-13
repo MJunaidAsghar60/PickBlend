@@ -187,24 +187,28 @@ export default function CharacterCounterSEO() {
           <div className="space-y-4">
             {[
               {
-                q: "What is the difference between characters with and without spaces?",
-                a: "Characters with spaces counts every character including spaces, which is how most platforms (Twitter, Instagram, SMS) measure limits. Characters without spaces counts only letters, numbers, and punctuation — no spaces. This is sometimes used for technical constraints like database column lengths.",
+                q: "How many characters is a post on X in 2026?",
+                a: "A standard post on X has a character limit of 280 characters in 2026 for regular accounts. This character limit includes spaces, punctuation, hashtags and mentions. URLs are automatically shortened to 23 characters by X regardless of their original length so a long URL counts as just 23 characters toward your limit. X Premium subscribers have access to extended post lengths but the 280-character limit applies to the vast majority of users. Our character counter tracks your X character count in real time showing you exactly how many characters remain before you hit the limit.",
               },
               {
-                q: "What is the character limit for Twitter?",
-                a: "Standard Twitter/X accounts have a 280-character limit per post. Twitter bios are limited to 160 characters. Twitter Premium subscribers may post longer content, but 280 characters is the standard limit for most users.",
+                q: "What is the ideal meta description length for SEO?",
+                a: "The ideal meta description length for SEO is between 150 and 160 characters including spaces. Meta descriptions shorter than 120 characters may be automatically expanded by Google with text pulled from your page content. Descriptions over 160 characters get truncated with an ellipsis in Google search results which cuts off your call to action at the worst possible moment. Writing meta descriptions between 145 and 158 characters gives you a safe margin across all devices and screen sizes. Our character counter shows your meta description length in real time with a live indicator highlighting when you approach the 160-character SEO limit.",
               },
               {
-                q: "How many characters is a meta description?",
-                a: "Google displays meta descriptions up to approximately 155–160 characters in search results. Descriptions longer than 160 characters are typically truncated with an ellipsis. We recommend aiming for 150–158 characters to stay safely within limits.",
+                q: "How many characters is an SMS message in 2026?",
+                a: "A standard SMS message in 2026 using GSM-7 encoding has a character limit of 160 characters. This 160-character SMS limit has been the standard since the protocol was designed in the 1980s based on postcard length research. Including a single emoji or special character forces the encoding to switch from GSM-7 to Unicode UCS-2 which drops the limit dramatically to just 70 characters per message. Messages exceeding the limit are split into multiple segments each billed separately by carriers. Our character counter shows your SMS character count with a live warning when you approach the 160-character SMS limit.",
               },
               {
-                q: "What counts as a character?",
-                a: "In text, a character is any single unit of written language — this includes letters (A-Z, a-z), digits (0-9), punctuation marks (,.!?), symbols (@#$%), spaces, and line breaks. Even a space is a character. Our counter includes all of these by default, with an option to exclude spaces.",
+                q: "What is the Instagram bio character limit?",
+                a: "The Instagram bio character limit is 150 characters including spaces, emoji and line breaks. Within this 150-character Instagram bio limit you need to communicate your identity, value proposition and a clear call to action — which requires careful editing. Emoji count as one or two characters each depending on the specific emoji. Line breaks count as one character. Every character in an Instagram bio is visible to visitors since bios are never truncated on profile pages unlike captions which are cut after 125 characters in the feed. Our character counter tracks your Instagram bio length against the 150-character limit in real time.",
               },
               {
-                q: "Is this character counter free to use?",
-                a: "Yes, completely free. No account required, no sign-up, no usage limits. All processing happens in your browser — your text is never sent to any server.",
+                q: "Does character count include spaces?",
+                a: "Whether character count includes spaces depends entirely on the context and platform. Most social media platforms including X, Instagram and LinkedIn count spaces as characters toward their post limits. For SEO purposes meta title and description character counts also include spaces. SMS messages count spaces as characters toward the 160-character limit. Our character counter displays both the total character count including spaces and the count excluding spaces simultaneously so you can check both metrics at once without switching between tools or doing mental math.",
+              },
+              {
+                q: "What is the LinkedIn post character limit?",
+                a: "The LinkedIn post character limit is 3,000 characters for standard text posts in 2026. However only the first 210 characters are visible in the LinkedIn feed before the See more button appears. This means your opening 210 characters carry disproportionate importance — they must hook readers strongly enough to earn the click to expand. LinkedIn articles have a separate limit of 125,000 characters. LinkedIn profile headlines are limited to 220 characters. Our character counter tracks your LinkedIn content length in real time so you can craft posts that maximize impact within both the 3,000-character total limit and the critical 210-character visible preview.",
               },
             ].map(({ q, a }) => (
               <div key={q} className="rounded-2xl border border-border bg-white p-6 shadow-sm">

@@ -106,42 +106,50 @@ function PageJsonLd() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "What is title case?",
+        name: "What is camelCase and when should I use it?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Title case capitalises the first letter of each major word in a string. It's used for article headlines, book titles, film names, and formal headings.",
+          text: "camelCase is a naming convention where the first word is all lowercase and every subsequent word begins with an uppercase letter — producing names like getUserName, totalWordCount and isLoading. camelCase is the standard naming convention for variables, functions and parameters in JavaScript, TypeScript, Java, Swift and Kotlin. It is required by major style guides including Airbnb JavaScript, Google JavaScript and StandardJS. Use camelCase for any variable or function name in frontend or backend JavaScript code. Our case converter converts any text to camelCase instantly with a single click.",
         },
       },
       {
         "@type": "Question",
-        name: "What is camelCase used for?",
+        name: "What is the difference between camelCase and PascalCase?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "camelCase is the standard naming convention for variables and functions in JavaScript, TypeScript, Java, and many other object-oriented languages. The first word is lowercase and each subsequent word starts with a capital letter.",
+          text: "The difference between camelCase and PascalCase is the capitalisation of the very first letter. camelCase starts with a lowercase letter — getUserName. PascalCase starts with an uppercase letter — GetUserName. PascalCase is also called UpperCamelCase reflecting this relationship. In practice the two conventions are used in completely different contexts. camelCase is for variables and functions. PascalCase is almost universally reserved for class names, React components and TypeScript interfaces across JavaScript, Python, Java and C#. Our text case converter handles both camelCase and PascalCase conversion instantly.",
         },
       },
       {
         "@type": "Question",
-        name: "What is the difference between snake_case and kebab-case?",
+        name: "When should I use snake_case vs camelCase?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Both use all-lowercase words, but snake_case separates words with underscores (_) while kebab-case uses hyphens (-). snake_case is common in Python and SQL; kebab-case is standard for CSS and URL slugs.",
+          text: "Use snake_case when writing Python, Ruby, Rust or SQL — these languages treat snake_case as their official standard. Use camelCase when writing JavaScript, TypeScript, Java or Swift. The choice is largely determined by the language ecosystem you are working in rather than personal preference. Mixing snake_case and camelCase within the same codebase creates inconsistency that slows down code review and onboarding. If your team has a style guide follow it strictly. Our case converter makes switching between snake_case and camelCase instant when you need to port code between languages.",
         },
       },
       {
         "@type": "Question",
-        name: "How do I convert text to uppercase online?",
+        name: "Why do URLs use kebab-case for SEO?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Paste or type your text into our case converter tool, then click the 'UPPERCASE' button. Your text is instantly converted to capital letters.",
+          text: "URLs use kebab-case because Google treats hyphens as word separators in search indexing making kebab-case URLs more SEO-friendly than alternatives. A URL like /word-frequency-counter tells Google it contains three separate meaningful words. An underscore-separated URL like /word_frequency_counter is treated as a single unseparated token by Google's indexing. kebab-case URL slugs also read more naturally in browser address bars and are easier to share verbally. Our case converter includes a kebab-case option for generating clean SEO-friendly URL slugs from any text.",
         },
       },
       {
         "@type": "Question",
-        name: "Is this text case converter free?",
+        name: "What is SCREAMING_SNAKE_CASE used for?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, completely free. No account, no sign-up, no usage limits. All conversions happen in your browser with no data sent to any server.",
+          text: "SCREAMING_SNAKE_CASE — all uppercase letters separated by underscores — is the standard convention for constants and environment variables across virtually all programming languages and platforms. Examples include MAX_RETRY_COUNT, API_SECRET_KEY, DATABASE_URL and NODE_ENV. The all-uppercase treatment signals to every developer reading the code that this value is a constant that should never be reassigned during runtime. Environment variables in .env files, Docker configurations and cloud platform settings universally use SCREAMING_SNAKE_CASE. Our case converter includes SCREAMING_SNAKE_CASE as a one-click conversion option.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How do I convert text to title case online?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Converting text to title case online is simple with our free text case converter. Paste your text, click the Title Case button and every major word is capitalised instantly. Title case capitalises the first letter of all major words while leaving articles like a, an and the and prepositions like in, on and at in lowercase unless they start the title. Title case is used for headlines, book titles, article headings, product names and page titles. Our case converter handles all 10 case formats including Title Case, Sentence case, camelCase, PascalCase, snake_case and kebab-case.",
         },
       },
     ],

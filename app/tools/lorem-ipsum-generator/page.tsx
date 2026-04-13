@@ -103,42 +103,50 @@ function PageJsonLd() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "What does Lorem Ipsum mean?",
+        name: "What does Lorem Ipsum mean in English?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Lorem Ipsum does not have a coherent meaning. It is a scrambled and altered extract from a classical Latin text. Individual words have Latin roots, but in their rearranged form they do not form grammatically correct or meaningful sentences. This is intentional — the text is designed to be unreadable as actual prose.",
+          text: "Lorem Ipsum does not have a coherent meaning in English or modern Latin. It is a deliberately scrambled extract from a classical Latin philosophical text — De Finibus Bonorum et Malorum — written by the Roman statesman Cicero in 45 BC. The original passage was intentionally altered and rearranged to be grammatically nonsensical so that viewers looking at a design mockup would not be distracted by reading actual meaningful content. Individual words have Latin roots but the Lorem Ipsum passage as a whole produces no translatable meaning. Our Lorem Ipsum generator creates unique randomised placeholder text every time you click Generate.",
         },
       },
       {
         "@type": "Question",
-        name: "Where does Lorem Ipsum come from?",
+        name: "Is Lorem Ipsum free to use for commercial projects?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Lorem Ipsum is derived from 'de Finibus Bonorum et Malorum', a philosophical work by the Roman statesman Cicero written in 45 BC. The passage was scrambled and modified, then adopted by the typesetting industry in the 1960s as a universal placeholder text standard.",
+          text: "Lorem Ipsum is completely free to use for any commercial or non-commercial purpose without restriction or attribution. The underlying Latin text is over 2,000 years old and entirely in the public domain. There are no copyright, licensing or intellectual property concerns with using Lorem Ipsum placeholder text in client projects, commercial designs, published applications or any other context. Our Lorem Ipsum generator is also free to use without limits — no sign-up required, no attribution needed and no restrictions on how much placeholder text you generate or how you use it.",
         },
       },
       {
         "@type": "Question",
-        name: "Is Lorem Ipsum Latin?",
+        name: "What is Lorem Ipsum used for in web development?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Lorem Ipsum is based on classical Latin but has been deliberately scrambled so it is not grammatically correct Latin. It is sometimes described as 'pseudo-Latin'. Individual words are recognisable as Latin-derived, but the sentences do not make sense.",
+          text: "Lorem Ipsum is used in web development as placeholder text to populate UI components before real content is available. Developers use Lorem Ipsum to fill blog post cards, article pages, user profiles, comment sections and any content-heavy component during development. It allows developers to test layout rendering, text overflow handling, responsive behaviour and typography at realistic content lengths without waiting for a copywriter. Our Lorem Ipsum generator includes an HTML format option that wraps each paragraph in proper tags for direct paste into HTML templates and CMS fields.",
         },
       },
       {
         "@type": "Question",
-        name: "How many words is a typical Lorem Ipsum paragraph?",
+        name: "How do I generate Lorem Ipsum with HTML paragraph tags?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "A typical Lorem Ipsum paragraph contains between 40 and 80 words, usually consisting of 4–7 sentences of 8–15 words each. Our generator creates paragraphs in this range by default.",
+          text: "Generating Lorem Ipsum with HTML paragraph tags is simple using our free Lorem Ipsum generator. Enable the HTML format checkbox before clicking Generate and every paragraph in the output is automatically wrapped in proper opening and closing paragraph tags. This HTML-formatted Lorem Ipsum is ready to paste directly into HTML templates, Markdown editors that support inline HTML, CMS rich text fields, email templates and any other context where properly tagged HTML content is required. The HTML format option works with all three generation modes — paragraphs, sentences and words.",
         },
       },
       {
         "@type": "Question",
-        name: "Can I use Lorem Ipsum for commercial projects?",
+        name: "How many words is a standard Lorem Ipsum paragraph?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. Lorem Ipsum is completely free to use for any purpose, commercial or otherwise. The underlying Latin text is ancient and in the public domain. Our generator is also free to use without limits — no sign-up or attribution required.",
+          text: "A standard Lorem Ipsum paragraph contains between 40 and 80 words typically consisting of 4 to 7 sentences of 8 to 15 words each. The classic opening Lorem Ipsum paragraph that begins with the words Lorem ipsum dolor sit amet is 69 words long. Our Lorem Ipsum generator creates paragraphs in the 40 to 80 word range by default producing natural-looking placeholder text at realistic content lengths. You can generate between 1 and 50 paragraphs at once and use the word count display below the output to verify the exact length of generated text.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is the difference between Lorem Ipsum paragraphs sentences and words?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "The three generation modes in our Lorem Ipsum generator produce different types of placeholder text output. Paragraphs mode generates complete multi-sentence paragraph blocks — ideal for article mockups and blog post layouts. Sentences mode generates individual standalone sentences joined together — useful for shorter content blocks and UI components. Words mode generates a specified number of individual Lorem Ipsum words — perfect for testing button labels, short captions, tooltip text and other micro-copy elements. All three modes support the classic Lorem ipsum opening and the HTML paragraph tag format option.",
         },
       },
     ],

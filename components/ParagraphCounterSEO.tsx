@@ -163,24 +163,28 @@ export default function ParagraphCounterSEO() {
           <div className="space-y-4">
             {[
               {
-                q: "What counts as a paragraph?",
-                a: "A paragraph is a block of text separated from other blocks by a blank line or indentation. In plain text and most digital editors, paragraphs are separated by pressing Enter twice. Our counter detects these breaks and counts each resulting block as one paragraph.",
+                q: "How many words should a paragraph be for online content?",
+                a: "A paragraph for online content should contain between 40 and 100 words — roughly 2 to 4 sentences. Short paragraphs create white space that makes text easier to scan on screens especially on mobile devices where long paragraphs look like impenetrable walls of text. Research on web reading behavior shows that online readers scan in an F-pattern reading the first few words of each line rather than reading every word. Short focused paragraphs accommodate this scanning behavior and keep readers engaged longer. Our paragraph counter shows the exact word count for every paragraph so you can identify and break up any paragraphs that are too long for online reading.",
               },
               {
-                q: "How long should a paragraph be for a blog post?",
-                a: "For web content, aim for 2–4 sentences per paragraph, or roughly 40–80 words. This creates the white space online readers need to scan efficiently. Longer paragraphs (6+ sentences) tend to reduce engagement, especially on mobile.",
+                q: "How do I count paragraphs in a long document quickly?",
+                a: "Counting paragraphs in a long document quickly is simple with our free paragraph counter. Paste your entire document text into the tool and it instantly detects every paragraph, counts them and displays a detailed breakdown card for each one showing word count, sentence count, character count and average word length. This per-paragraph analysis is far faster than counting manually in a word processor especially for documents over 1,000 words. The tool detects paragraph breaks from blank lines making it compatible with text copied from Microsoft Word, Google Docs, web pages and any other text source.",
               },
               {
-                q: "Can a paragraph be one sentence?",
-                a: "Yes — single-sentence paragraphs are a valid and effective technique in web writing and marketing copy. They create emphasis and visual impact. Use them sparingly for maximum effect rather than making every paragraph a single sentence.",
+                q: "How many paragraphs should a 1000-word article have?",
+                a: "A 1,000-word article should have approximately 8 to 15 paragraphs depending on paragraph length and content structure. For online content with short paragraphs of 60 to 80 words you need around 12 to 16 paragraphs to reach 1,000 words. For academic content with longer paragraphs of 150 to 200 words you need only 5 to 7 paragraphs. Most well-structured 1,000-word blog posts use an introduction of 2 to 3 paragraphs, 4 to 6 body sections of 2 to 3 paragraphs each and a conclusion of 1 to 2 paragraphs. Paste your article into our paragraph counter to see your exact paragraph structure at a glance.",
               },
               {
-                q: "How many paragraphs should a 1,000-word article have?",
-                a: "A 1,000-word article with average paragraph lengths of 50–80 words will have roughly 12–20 paragraphs. This creates a well-paced piece with enough white space for comfortable reading. Adding subheadings every 3–4 paragraphs further improves structure.",
+                q: "What is the ideal paragraph length for academic essays?",
+                a: "The ideal paragraph length for academic essays is between 100 and 200 words — roughly 4 to 6 sentences. Academic paragraphs need to be long enough to fully develop a single argument with a topic sentence, supporting evidence, explanation and a concluding or transitional sentence. A paragraph under 80 words in academic writing is typically considered underdeveloped. A paragraph over 250 words usually contains more than one idea and should be split. Our paragraph counter displays the word count for every individual paragraph making it easy to identify both underdeveloped short paragraphs and overpacked long ones in your academic writing.",
               },
               {
-                q: "Is this paragraph counter free?",
-                a: "Yes, completely free. No account required, no sign-up, no usage limits. All processing happens in your browser — your text is never sent to any server.",
+                q: "Can I see the word count for each paragraph separately?",
+                a: "Yes — our paragraph counter displays a detailed breakdown card for every individual paragraph in your text. Each card shows the complete paragraph text alongside its specific word count, sentence count, total character count and average word length. This per-paragraph word count analysis is especially useful for academic writers who need consistent paragraph development, blog writers checking that each section has adequate depth and students verifying that every body paragraph meets minimum word count requirements. The numbered paragraph badges make it easy to reference specific paragraphs when editing.",
+              },
+              {
+                q: "How many paragraphs is a 5-paragraph essay?",
+                a: "A 5-paragraph essay has exactly five paragraphs following a classic academic structure — one introductory paragraph, three body paragraphs and one concluding paragraph. Each body paragraph develops a single supporting argument with a topic sentence, two to three pieces of evidence or explanation and a concluding sentence. At a typical paragraph length of 100 to 150 words a standard 5-paragraph essay runs between 500 and 750 words total. This format is taught in high school English classes throughout the US and remains the foundation of academic argument structure. Use our paragraph counter to verify your 5-paragraph essay has the right structure before submission.",
               },
             ].map(({ q, a }) => (
               <div key={q} className="rounded-2xl border border-border bg-white p-6 shadow-sm">

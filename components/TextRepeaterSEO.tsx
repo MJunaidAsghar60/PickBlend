@@ -177,24 +177,28 @@ export default function TextRepeaterSEO() {
           <div className="space-y-4">
             {[
               {
-                q: "What can I use a text repeater for?",
-                a: "Text repeaters are useful for software testing (generating long strings to test input limits), UI design (repeating placeholder labels or menu items), data formatting (generating comma-separated or newline-separated lists), and content creation (repeating phrases for artistic or creative purposes).",
+                q: "How do I repeat text multiple times online for free?",
+                a: "Repeating text multiple times online is simple with our free text repeater tool. Paste or type any text into the input field, set the number of repetitions between 1 and 100, choose your preferred separator and click Generate. Your repeated text appears instantly in the output area ready to copy with one click. The tool supports multiple separator options including new line, comma, space, pipe and dash as well as a custom separator field for any character or string you need between repetitions. No sign-up or installation required — the text repeater works instantly in any browser.",
               },
               {
-                q: "What separators can I use between repetitions?",
-                a: "Common separator options include a space (word separation), comma (CSV formatting), newline (line-by-line lists), custom characters or strings, and no separator at all (for concatenated output). Choose based on how you plan to use the repeated text.",
+                q: "What are text repeaters used for in development?",
+                a: "Text repeaters are used extensively in software development and quality assurance testing. Developers use repeated text to populate database fields with realistic-length content for performance testing, stress test input validation by generating content at or near character limits, create fixture data for unit tests and fill UI components during frontend development before real API data is available. QA engineers use text repeaters to test how applications handle maximum-length inputs and repetitive data patterns. Our text repeater supports up to 100 repetitions with custom separators making it suitable for most development and testing scenarios.",
               },
               {
-                q: "Is there a limit to how many times I can repeat text?",
-                a: "Our browser-based text repeater handles hundreds of repetitions instantly. For very large outputs (thousands of repetitions of long strings), performance depends on your device's processing power, but most modern browsers handle these cases without issues.",
+                q: "Can I add a prefix and suffix to repeated text?",
+                a: "Yes — our text repeater includes both prefix and suffix fields that let you add custom text before and after every individual repetition. The prefix appears at the start of each repeated instance and the suffix appears at the end before the separator. For example with the text item, prefix [ and suffix ] you get [item][item][item]. This feature is useful for generating array literals, HTML element lists, JSON data structures and any other format that requires wrapper characters around each repeated element. The prefix and suffix work alongside the numbering option and all separator choices.",
               },
               {
-                q: "Can I repeat multi-line text?",
-                a: "Yes — you can paste a block of multi-line text and repeat the entire block multiple times. This is useful for repeating template structures, multi-line code snippets, or formatted text blocks.",
+                q: "How many times can I repeat text with this tool?",
+                a: "Our text repeater supports between 1 and 100 repetitions per generation. For most practical use cases including design mockups, test data generation, content creation and development testing 100 repetitions is more than sufficient. The word count and character count displayed below the output update automatically so you can see exactly how much text 100 repetitions of your input produces. If you need more than 100 repetitions for large-scale data generation a simple programming loop in Python or JavaScript would be more efficient for that specific use case.",
               },
               {
-                q: "Is this text repeater free to use?",
-                a: "Yes, completely free. No account, no sign-up, no usage limits. Everything runs in your browser — your text is never sent to any server.",
+                q: "Can I number each repeated line automatically?",
+                a: "Yes — enable the numbering checkbox before generating and each repetition is automatically prefixed with its sequence number in the format 1. text, 2. text, 3. text and so on. Auto numbering works alongside all separator options and the custom prefix and suffix fields. The sequence numbers update correctly when you change the repetition count so 10. text through 1. text always reflects the actual position. Numbered repetitions are particularly useful for creating ordered test cases, numbered placeholder lists, sequentially labelled content blocks and structured data with positional identifiers.",
+              },
+              {
+                q: "What separators can I use between repeated text?",
+                a: "Our text repeater offers six separator options for controlling how repeated text segments are joined together. New line places each repetition on its own line making it ideal for lists and structured content. Comma and space separates with a comma producing comma-separated values. Space joins with a single space for inline repetition. Pipe separates with a pipe character for pipe-delimited data formats. Dash joins with a dash for dash-separated content. The custom separator option lets you type any character string as your separator — useful for tab-separated values, semicolons, HTML tags or any other format your specific use case requires.",
               },
             ].map(({ q, a }) => (
               <div key={q} className="rounded-2xl border border-border bg-white p-6 shadow-sm">
