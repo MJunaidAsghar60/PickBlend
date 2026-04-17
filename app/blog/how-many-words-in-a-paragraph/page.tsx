@@ -55,15 +55,34 @@ function PageJsonLd() {
 
   const article = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: "How Many Words Are in a Paragraph?",
-    datePublished: "2026-04-06",
-    dateModified: "2026-04-06",
-    author: { "@type": "Organization", name: "PickBlend" },
-    publisher: { "@type": "Organization", name: "PickBlend", url: BASE_URL },
     description:
       "Most paragraphs contain 100 to 200 words and 3 to 5 sentences. But the ideal paragraph length depends on where you are writing. Here is the complete breakdown.",
     url: POST_URL,
+    datePublished: "2026-04-06",
+    dateModified: "2026-04-06",
+    author: {
+      "@type": "Organization",
+      name: "PickBlend Team",
+      url: `${BASE_URL}/authors/pickblend-team`,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "PickBlend",
+      url: BASE_URL,
+      logo: { "@type": "ImageObject", url: `${BASE_URL}/icon.svg` },
+    },
+    image: {
+      "@type": "ImageObject",
+      url: `${BASE_URL}/og/home.png`,
+      width: 1200,
+      height: 630,
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": POST_URL,
+    },
   };
 
   const faq = {
@@ -153,7 +172,7 @@ export default function BlogPost() {
             <span>·</span>
             <span>7 min read</span>
             <span>·</span>
-            <span>By PickBlend</span>
+            <Link href="/authors/pickblend-team" className="transition-colors hover:text-primary">PickBlend Team</Link>
           </div>
 
           <hr className="mt-6 border-border" />

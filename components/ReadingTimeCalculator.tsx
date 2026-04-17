@@ -22,7 +22,7 @@ import {
 
 const READING_SPEEDS = {
   slow: { wpm: 150, label: "Slow Reader" },
-  average: { wpm: 275, label: "Average Reader" },
+  average: { wpm: 238, label: "Average Reader" },
   fast: { wpm: 450, label: "Fast Reader" },
 } as const;
 
@@ -421,9 +421,9 @@ export default function ReadingTimeCalculator() {
           <div className="rounded-2xl border border-border bg-surface p-5 shadow-sm lg:hidden">
             <div className="mb-4 flex items-center gap-2">
               <Gauge className="h-5 w-5 text-primary" />
-              <h2 className="text-sm font-semibold uppercase tracking-wider text-text-secondary">
+              <p className="text-sm font-semibold uppercase tracking-wider text-text-secondary" aria-hidden="true">
                 Content Benchmarks
-              </h2>
+              </p>
             </div>
             <BenchmarkTable
               readWpm={READING_SPEEDS[readingSpeed].wpm}

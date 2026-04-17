@@ -6,7 +6,7 @@ import SentenceCounterSEO from "@/components/SentenceCounterSEO";
 const BASE_URL = "https://pickblend.com";
 
 export const metadata: Metadata = {
-  title: "Free Sentence Counter — Count Sentences Online | PickBlend",
+  title: "Free Sentence Counter — Count Sentences Online",
   description:
     "Count sentences in your text instantly. Paste any text and get an accurate sentence count with average sentence length analysis. Free, no sign-up.",
   keywords: ["sentence counter", "count sentences", "sentence count", "online sentence counter", "average sentence length"],

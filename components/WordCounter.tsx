@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 
 const STORAGE_KEY = "wc-tool-text";
-const READING_WPM = 275;
+const READING_WPM = 238;
 const SPEAKING_WPM = 130;
 
 const STOP_WORDS = new Set([
@@ -385,9 +385,9 @@ export default function WordCounter() {
           <div className="rounded-2xl border border-border bg-surface p-5 shadow-sm lg:hidden">
             <div className="mb-4 flex items-center gap-2">
               <BarChart3 className="h-5 w-5 text-primary" />
-              <h2 className="text-sm font-semibold uppercase tracking-wider text-text-secondary">
+              <p className="text-sm font-semibold uppercase tracking-wider text-text-secondary" aria-hidden="true">
                 Keyword Density
-              </h2>
+              </p>
             </div>
             <KeywordTable keywords={keywords} />
           </div>

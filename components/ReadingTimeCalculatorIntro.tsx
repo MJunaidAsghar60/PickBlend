@@ -27,7 +27,7 @@ export default function ReadingTimeCalculatorIntro() {
 
         <p className="mb-3 text-sm leading-relaxed text-text-secondary">
           The calculate reading time feature covers three reading speeds — slow (150 wpm), average
-          (275 wpm), and fast (450 wpm) — alongside five speaking speeds from a slow, deliberate
+          (238 wpm), and fast (450 wpm) — alongside five speaking speeds from a slow, deliberate
           155 wpm up to a fast 190 wpm. Each speed is labelled with its real-world context so you
           can match the right number to your actual use case. The tool also shows content length
           benchmarks so you can see at a glance how your piece compares to a typical blog post,

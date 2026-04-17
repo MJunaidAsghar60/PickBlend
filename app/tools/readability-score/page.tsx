@@ -7,7 +7,7 @@ import ReadabilityScoreSEO from "@/components/ReadabilityScoreSEO";
 const BASE_URL = "https://pickblend.com";
 
 export const metadata: Metadata = {
-  title: "Free Readability Score Checker — Flesch Reading Ease | PickBlend",
+  title: "Free Readability Score Checker — Flesch Reading Ease",
   description:
     "Check your text readability score instantly. Get Flesch Reading Ease, Flesch-Kincaid Grade Level and reading level analysis. Free, no sign-up required.",
   keywords: ["readability score", "readability checker", "flesch reading ease", "flesch kincaid grade level", "reading level checker"],

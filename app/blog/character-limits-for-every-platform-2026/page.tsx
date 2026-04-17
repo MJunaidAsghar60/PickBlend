@@ -58,15 +58,34 @@ function PageJsonLd() {
 
   const article = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: "Character Limits for Every Platform in 2026 — The Complete Guide",
-    datePublished: "2026-04-07",
-    dateModified: "2026-04-07",
-    author: { "@type": "Organization", name: "PickBlend" },
-    publisher: { "@type": "Organization", name: "PickBlend", url: BASE_URL },
     description:
       "Every platform has different character limits in 2026. From social media posts and bios to meta tags, SMS and email subject lines — here is the complete updated guide with all limits in one place.",
     url: POST_URL,
+    datePublished: "2026-04-07",
+    dateModified: "2026-04-07",
+    author: {
+      "@type": "Organization",
+      name: "PickBlend Team",
+      url: `${BASE_URL}/authors/pickblend-team`,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "PickBlend",
+      url: BASE_URL,
+      logo: { "@type": "ImageObject", url: `${BASE_URL}/icon.svg` },
+    },
+    image: {
+      "@type": "ImageObject",
+      url: `${BASE_URL}/og/home.png`,
+      width: 1200,
+      height: 630,
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": POST_URL,
+    },
   };
 
   const faq = {
@@ -156,7 +175,7 @@ export default function BlogPost() {
             <span>·</span>
             <span>8 min read</span>
             <span>·</span>
-            <span>By PickBlend</span>
+            <Link href="/authors/pickblend-team" className="transition-colors hover:text-primary">PickBlend Team</Link>
           </div>
 
           <hr className="mt-6 border-border" />

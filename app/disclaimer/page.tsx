@@ -93,8 +93,8 @@ export default function DisclaimerPage() {
               <div className="space-y-3 text-text-secondary leading-relaxed">
                 <p>
                   Reading time estimates are calculated using an average adult silent reading speed of approximately
-                  <strong className="text-text"> 275 words per minute (wpm)</strong>, which aligns with published
-                  research on adult reading rates.
+                  <strong className="text-text"> 238 words per minute (wpm)</strong>, which aligns with published
+                  research on adult reading rates (Brysbaert et al., 2019).
                 </p>
                 <p>
                   Please note:

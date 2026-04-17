@@ -61,7 +61,7 @@ export default function ReadingTimeSEO() {
           <p>
             The formula is straightforward: divide the total number of words by
             the reader&apos;s speed in words per minute (wpm). An average adult
-            reads at approximately 275 wpm silently, though this varies
+            reads at approximately 238 wpm silently (Brysbaert et al., 2019), though this varies
             significantly depending on the complexity of the material, the
             reader&apos;s familiarity with the topic, and whether the content
             includes data-heavy tables or simple prose.
@@ -103,10 +103,10 @@ export default function ReadingTimeSEO() {
             </table>
           </div>
           <p className="mt-4">
-            Our tool defaults to 275 wpm for the average reader, which aligns
-            with widely cited research from Brysbaert (2019) and is the standard
-            used by most publishing platforms. You can toggle between slow (150
-            wpm), average (275 wpm), and fast (450 wpm) to see how different
+            Our tool defaults to 238 wpm for the average reader, which aligns
+            with the Brysbaert et al. (2019) meta-analysis of 190 studies covering
+            17,000 participants — the gold standard for reading speed research. You can toggle between slow (150
+            wpm), average (238 wpm), and fast (450 wpm) to see how different
             audiences will experience your content.
           </p>
         </section>

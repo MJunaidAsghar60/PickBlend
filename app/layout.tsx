@@ -88,8 +88,23 @@ function GlobalJsonLd() {
     "@type": "Organization",
     name: "PickBlend",
     url: BASE_URL,
+    logo: `${BASE_URL}/icon.svg`,
     description:
-      "Free online writing and SEO tools for writers, students, bloggers, and content creators.",
+      "Free privacy-first browser-based writing tools for writers, students and developers.",
+    foundingDate: "2026",
+    sameAs: [],
+    knowsAbout: [
+      "Writing Tools",
+      "Content Creation",
+      "Web Development",
+      "SEO",
+      "Readability Analysis",
+    ],
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      url: `${BASE_URL}/contact`,
+    },
   };
 
   return (
@@ -155,6 +170,23 @@ export default function RootLayout({
                 <Link href="/blog" className="underline-offset-2 transition-colors hover:text-text hover:underline">Blog</Link>
                 <Link href="/about" className="underline-offset-2 transition-colors hover:text-text hover:underline">About</Link>
                 <Link href="/contact" className="underline-offset-2 transition-colors hover:text-text hover:underline">Contact</Link>
+              </nav>
+            </div>
+
+            {/* Popular Guides row */}
+            <div className="mb-4">
+              <p className="mb-2 text-center text-[11px] font-semibold uppercase tracking-widest text-text-secondary/50">
+                Popular Guides
+              </p>
+              <nav
+                aria-label="Footer guides navigation"
+                className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2"
+              >
+                <Link href="/blog/how-many-words-in-a-paragraph" className="underline-offset-2 transition-colors hover:text-text hover:underline">Words in a Paragraph</Link>
+                <Link href="/blog/how-long-does-it-take-to-read-1400-words" className="underline-offset-2 transition-colors hover:text-text hover:underline">Reading Time Guide</Link>
+                <Link href="/blog/character-limits-for-every-platform-2026" className="underline-offset-2 transition-colors hover:text-text hover:underline">Character Limits 2026</Link>
+                <Link href="/blog/camelcase-vs-snake-case" className="underline-offset-2 transition-colors hover:text-text hover:underline">camelCase vs snake_case</Link>
+                <Link href="/blog" className="font-medium text-primary underline-offset-2 transition-colors hover:text-primary-dark hover:underline">All Guides →</Link>
               </nav>
             </div>
 

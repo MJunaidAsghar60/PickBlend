@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/blog/how-many-words-in-a-paragraph`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${baseUrl}/blog/character-limits-for-every-platform-2026`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${baseUrl}/blog/camelcase-vs-snake-case`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${baseUrl}/authors/pickblend-team`, lastModified: now, changeFrequency: "monthly", priority: 0.4 },
     { url: `${baseUrl}/about`, lastModified: now, changeFrequency: "yearly", priority: 0.5 },
     { url: `${baseUrl}/contact`, lastModified: now, changeFrequency: "yearly", priority: 0.4 },
     { url: `${baseUrl}/privacy-policy`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },

@@ -6,7 +6,7 @@ import TextRepeaterSEO from "@/components/TextRepeaterSEO";
 const BASE_URL = "https://pickblend.com";
 
 export const metadata: Metadata = {
-  title: "Free Text Repeater — Repeat Text Online | PickBlend",
+  title: "Free Text Repeater — Repeat Text Online",
   description:
     "Repeat any text or word multiple times instantly. Choose separator, number of repetitions and format. Free online tool, no sign-up required.",
   keywords: ["text repeater", "repeat text online", "word repeater", "text duplicator", "repeat word generator"],

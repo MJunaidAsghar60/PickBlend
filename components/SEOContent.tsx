@@ -206,8 +206,8 @@ export default function SEOContent() {
           </h2>
           <p>
             Reading time and speaking time are calculated using well-established
-            averages. The typical adult reads silently at approximately 275 words
-            per minute (wpm), while a comfortable public speaking pace averages
+            averages. The typical adult reads silently at approximately 238 words
+            per minute (wpm) (Brysbaert et al., 2019), while a comfortable public speaking pace averages
             130 wpm. These benchmarks are used across the publishing and media
             industries.
           </p>

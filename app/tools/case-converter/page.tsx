@@ -6,7 +6,7 @@ import CaseConverterSEO from "@/components/CaseConverterSEO";
 const BASE_URL = "https://pickblend.com";
 
 export const metadata: Metadata = {
-  title: "Text Case Converter — UPPER, lower, Title, Sentence Case | PickBlend",
+  title: "Text Case Converter — UPPER, lower, Title, Sentence Case",
   description:
     "Free online text case converter. Convert text to uppercase, lowercase, title case, sentence case, camelCase, snake_case, and more — instantly, no sign-up.",
   keywords: [

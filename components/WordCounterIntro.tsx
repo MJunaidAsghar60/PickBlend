@@ -34,7 +34,7 @@ export default function WordCounterIntro() {
 
         <p className="mb-3 text-sm leading-relaxed text-text-secondary">
           This online word count tool tracks words, characters with and without spaces, sentences,
-          paragraphs, reading time at 275 wpm, speaking time at 130 wpm, and your top keywords by
+          paragraphs, reading time at 238 wpm, speaking time at 130 wpm, and your top keywords by
           density — all refreshing in real time as you type. Text case conversion (UPPER, lower,
           Sentence case) is available directly in the toolbar for quick transformations without
           leaving the page.
