@@ -7,9 +7,9 @@ const BASE_URL = "https://pickblend.com";
 
 export const metadata: Metadata = {
   title:
-    "Reading Time Calculator — Speaking Time & Script Length",
+    "Free Reading Time Calculator — Speaking Time & Pacing",
   description:
-    "Free reading time calculator. Find out how long it takes to read or speak your text. Supports multiple reading and speaking speeds with benchmarks for blogs, speeches, and scripts.",
+    "Calculate reading time and speaking time for any text instantly. Multiple speed options for blogs, speeches and presentations. Free, no sign-up required.",
   keywords: [
     "reading time calculator",
     "reading time",

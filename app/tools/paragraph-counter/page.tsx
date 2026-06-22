@@ -9,7 +9,7 @@ const BASE_URL = "https://pickblend.com";
 export const metadata: Metadata = {
   title: "Free Paragraph Counter — Count Paragraphs Online",
   description:
-    "Count paragraphs in your text instantly. Also counts words, characters and sentences per paragraph. Free online tool, no sign-up required.",
+    "Count paragraphs with per-paragraph word count, sentence count and character count. Free online paragraph counter — no sign-up required.",
   keywords: ["paragraph counter", "count paragraphs", "paragraph count", "online paragraph counter", "paragraphs in text"],
   authors: [{ name: "PickBlend" }],
   openGraph: {

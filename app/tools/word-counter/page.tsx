@@ -7,9 +7,9 @@ const BASE_URL = "https://pickblend.com";
 
 export const metadata: Metadata = {
   title:
-    "Word Counter — Count Words, Characters & Sentences Free",
+    "Free Word Counter — Words, Characters, Reading Time & More",
   description:
-    "Free online word counter. Count words, characters, sentences and paragraphs instantly. Get reading time, keyword density and text case tools — no sign-up needed.",
+    "Paste your text — get instant word count, character count, reading time and keyword density. Free online word counter. No sign-up, 100% private.",
   keywords: [
     "word counter",
     "word count",

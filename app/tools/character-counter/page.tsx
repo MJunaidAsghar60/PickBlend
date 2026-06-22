@@ -6,9 +6,9 @@ import CharacterCounterSEO from "@/components/CharacterCounterSEO";
 const BASE_URL = "https://pickblend.com";
 
 export const metadata: Metadata = {
-  title: "Character Counter — Count Characters Online Free",
+  title: "Free Character Counter — Live Platform Limits & Character Count",
   description:
-    "Free online character counter. Count characters with and without spaces instantly. Check Twitter, Instagram, meta description and SMS character limits in real time.",
+    "Count characters instantly with live limits for X, Instagram, LinkedIn, SMS and meta tags. Free character counter — no sign-up, works in your browser.",
   keywords: [
     "character counter",
     "character count",

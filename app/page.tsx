@@ -5,7 +5,6 @@ import {
   ArrowRight,
   Zap,
   Shield,
-  Clock,
   Timer,
   Hash,
   CaseSensitive,
@@ -13,6 +12,11 @@ import {
   BarChart3,
   Sparkles,
   MousePointerClick,
+  AlignLeft,
+  Repeat,
+  BookOpen,
+  TrendingUp,
+  Pilcrow,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -99,6 +103,51 @@ const toolsList = [
       "Generate placeholder text by paragraphs, sentences or words. Perfect for designers and developers.",
     tag: "New",
     cta: "Generate Text Free →",
+  },
+  {
+    name: "Sentence Counter",
+    href: "/tools/sentence-counter",
+    icon: AlignLeft,
+    description:
+      "Count sentences in real time with average length analysis and numbered sentence breakdown. Perfect for writers and students.",
+    tag: "New",
+    cta: "Count Sentences Free →",
+  },
+  {
+    name: "Text Repeater",
+    href: "/tools/text-repeater",
+    icon: Repeat,
+    description:
+      "Repeat any text 1 to 100 times with custom separators, prefix, suffix and auto numbering. Perfect for developers and QA testing.",
+    tag: "New",
+    cta: "Repeat Text Free →",
+  },
+  {
+    name: "Readability Score",
+    href: "/tools/readability-score",
+    icon: BookOpen,
+    description:
+      "Check Flesch Reading Ease, Flesch-Kincaid Grade Level and 6 readability scores instantly. Includes a visual difficulty gauge.",
+    tag: "New",
+    cta: "Check Readability Free →",
+  },
+  {
+    name: "Word Frequency Counter",
+    href: "/tools/word-frequency",
+    icon: TrendingUp,
+    description:
+      "Analyze word frequency with a sortable table, stop words filter and keyword density percentage. Essential for SEO writers.",
+    tag: "New",
+    cta: "Analyze Word Frequency →",
+  },
+  {
+    name: "Paragraph Counter",
+    href: "/tools/paragraph-counter",
+    icon: Pilcrow,
+    description:
+      "Count paragraphs with per-paragraph word count, sentence count and character count breakdown. Perfect for long-form writers.",
+    tag: "New",
+    cta: "Count Paragraphs Free →",
   },
 ];
 
@@ -238,20 +287,13 @@ export default function HomePage() {
             })}
           </div>
 
-          {/* More tools link */}
-          <div className="mt-8 rounded-2xl border-2 border-dashed border-border bg-surface-alt/50 p-8 text-center">
-            <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-surface-hover">
-              <Clock className="h-6 w-6 text-text-secondary/40" />
-            </div>
-            <h3 className="text-base font-bold text-text">More Tools Coming Soon</h3>
-            <p className="mt-2 text-sm text-text-secondary">
-              Grammar checker, plagiarism detector, readability scorer, and more — stay tuned!
-            </p>
+          {/* Browse all tools */}
+          <div className="mt-8 text-center">
             <Link
               href="/tools"
-              className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline underline-offset-2"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline underline-offset-2"
             >
-              Browse all tools →
+              Browse all 10 tools →
             </Link>
           </div>
         </div>

@@ -6,9 +6,9 @@ import LoremIpsumSEO from "@/components/LoremIpsumSEO";
 const BASE_URL = "https://pickblend.com";
 
 export const metadata: Metadata = {
-  title: "Lorem Ipsum Generator — Free Placeholder Text",
+  title: "Free Lorem Ipsum Generator — Placeholder Text in Seconds",
   description:
-    "Free Lorem Ipsum generator. Generate placeholder text by paragraphs, sentences, or words instantly. Perfect for web design mockups and app development.",
+    "Generate Lorem Ipsum placeholder text by paragraphs, sentences or words instantly. HTML format included. Free generator — no sign-up required.",
   keywords: [
     "lorem ipsum generator",
     "lorem ipsum",

@@ -7,9 +7,9 @@ import WordFrequencySEO from "@/components/WordFrequencySEO";
 const BASE_URL = "https://pickblend.com";
 
 export const metadata: Metadata = {
-  title: "Free Word Frequency Counter — Analyze Word Usage",
+  title: "Free Word Frequency Counter — Keyword Density Analysis",
   description:
-    "Analyze word frequency in your text. See which words appear most often with percentage breakdown. Perfect for SEO and content analysis. Free, no sign-up.",
+    "Find the most used words in any text with frequency percentage and keyword density. Stop words filter included. Free word frequency counter — no sign-up.",
   keywords: ["word frequency counter", "word frequency analysis", "keyword density", "word usage analyzer", "word occurrence counter"],
   authors: [{ name: "PickBlend" }],
   openGraph: {
