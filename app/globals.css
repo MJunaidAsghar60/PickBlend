@@ -1,27 +1,110 @@
 @import "tailwindcss";
 
+/* ============================================================
+   Tailwind v4 @theme — generates all utility classes
+   ============================================================ */
 @theme {
-  --color-primary: #2563eb;
-  --color-primary-light: #3b82f6;
-  --color-primary-dark: #1d4ed8;
-  --color-surface: #ffffff;
-  --color-surface-alt: #f8f9fb;
-  --color-surface-hover: #f1f3f6;
-  --color-border: #e3e5e8;
-  --color-text: #1a1a2e;
-  --color-text-secondary: #6b7085;
-  --color-accent-sky: #0284c7;
-  --color-accent-teal: #0d9488;
-  --color-accent-green: #16a34a;
-  --color-accent-orange: #ea580c;
-  --color-accent-red: #dc2626;
-  --color-accent-slate: #475569;
+  /* Background */
+  --color-background: #FAFAF8;
+
+  /* Surfaces */
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F5F4F0;
+  --color-surface-hover: #EFEDE8;
+
+  /* Borders */
+  --color-border: #E8E6DF;
+  --color-border-light: #F0EEE9;
+  --color-border-strong: #D4D1C9;
+
+  /* Primary — deep teal */
+  --color-primary: #0D9488;
+  --color-primary-dark: #0F766E;
+  --color-primary-light: #14B8A6;
+  --color-primary-subtle: #F0FDFA;
+  --color-primary-border: #99F6E4;
+
+  /* Text */
+  --color-text: #1C1917;
+  --color-text-secondary: #78716C;
+  --color-text-tertiary: #A8A29E;
+  --color-text-inverse: #FFFFFF;
+
+  /* Accent — green */
+  --color-accent-green: #16A34A;
+  --color-accent-green-bg: #F0FDF4;
+  --color-accent-green-border: #BBF7D0;
+
+  /* Accent — red */
+  --color-accent-red: #DC2626;
+  --color-accent-red-bg: #FEF2F2;
+  --color-accent-red-border: #FECACA;
+
+  /* Accent — amber */
+  --color-accent-amber: #D97706;
+  --color-accent-amber-bg: #FFFBEB;
+  --color-accent-amber-border: #FDE68A;
+
+  /* Accent — orange */
+  --color-accent-orange: #EA580C;
+  --color-accent-orange-bg: #FFF7ED;
+
+  /* Accent — sky */
+  --color-accent-sky: #0EA5E9;
+  --color-accent-sky-bg: #F0F9FF;
 }
 
+/* ============================================================
+   CSS custom properties (shadows, fonts, dark mode)
+   ============================================================ */
 :root {
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+
+  --shadow-sm: 0 1px 3px rgba(28,25,23,0.06), 0 1px 2px rgba(28,25,23,0.04);
+  --shadow-md: 0 4px 16px rgba(28,25,23,0.08), 0 2px 4px rgba(28,25,23,0.04);
+  --shadow-lg: 0 8px 32px rgba(28,25,23,0.10), 0 4px 8px rgba(28,25,23,0.05);
+  --shadow-primary: 0 4px 14px rgba(13,148,136,0.25);
 }
 
+.dark {
+  --color-background: #0F0E0D;
+  --color-surface: #1C1917;
+  --color-surface-alt: #28251F;
+  --color-surface-hover: #302C25;
+  --color-border: #3C3830;
+  --color-border-light: #2E2B24;
+  --color-border-strong: #4A4540;
+  --color-primary: #2DD4BF;
+  --color-primary-dark: #14B8A6;
+  --color-primary-light: #5EEAD4;
+  --color-primary-subtle: #042F2E;
+  --color-primary-border: #0F766E;
+  --color-text: #F5F4F0;
+  --color-text-secondary: #A8A29E;
+  --color-text-tertiary: #78716C;
+  --color-text-inverse: #1C1917;
+  --color-accent-green: #4ADE80;
+  --color-accent-green-bg: #052E16;
+  --color-accent-green-border: #166534;
+  --color-accent-red: #F87171;
+  --color-accent-red-bg: #450A0A;
+  --color-accent-red-border: #7F1D1D;
+  --color-accent-amber: #FCD34D;
+  --color-accent-amber-bg: #2D1A00;
+  --color-accent-amber-border: #92400E;
+  --color-accent-orange: #FB923C;
+  --color-accent-orange-bg: #2D0E00;
+  --color-accent-sky: #38BDF8;
+  --color-accent-sky-bg: #082F49;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.20), 0 1px 2px rgba(0,0,0,0.16);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.24), 0 2px 4px rgba(0,0,0,0.16);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.30), 0 4px 8px rgba(0,0,0,0.18);
+  --shadow-primary: 0 4px 14px rgba(45,212,191,0.30);
+}
+
+/* ============================================================
+   Base reset & global styles
+   ============================================================ */
 * {
   box-sizing: border-box;
 }
@@ -34,19 +117,48 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background: #f8f9fb;
+  background-color: #FAFAF8;
   min-height: 100vh;
+  color: #1C1917;
 }
 
 textarea:focus {
   outline: none;
 }
 
-::selection {
-  background-color: #bfdbfe;
-  color: #1e3a5f;
+/* ============================================================
+   Focus ring — teal, not browser default
+   ============================================================ */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
+/* ============================================================
+   Text selection — warm teal tint
+   ============================================================ */
+::selection {
+  background-color: #CCFBF1;
+  color: #0F766E;
+}
+
+/* ============================================================
+   Smooth transitions on interactive elements
+   ============================================================ */
+a,
+button,
+input,
+select,
+textarea {
+  transition-property: color, background-color, border-color, box-shadow, transform;
+  transition-duration: 150ms;
+  transition-timing-function: ease;
+}
+
+/* ============================================================
+   Scrollbar
+   ============================================================ */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -57,28 +169,31 @@ textarea:focus {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #c8ccd2;
+  background: #D4D1C9;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #9ca3af;
+  background: #A8A29E;
 }
 
+/* ============================================================
+   Animations
+   ============================================================ */
 @keyframes fade-in {
   from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+  to   { opacity: 1; transform: translateY(0);   }
 }
 
 .animate-fade-in {
-  animation: fade-in 0.4s ease-out;
+  animation: fade-in 0.25s ease-out forwards;
 }
 
 @keyframes count-up {
-  from { opacity: 0; transform: scale(0.8); }
-  to { opacity: 1; transform: scale(1); }
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1);   }
 }
 
 .animate-count {
-  animation: count-up 0.2s ease-out;
+  animation: count-up 0.18s ease-out;
 }

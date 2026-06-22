@@ -137,7 +137,7 @@ export default function RootLayout({
       >
         <Navbar />
         <div className="flex-1">{children}</div>
-        <footer className="border-t border-border bg-white/60 py-10 text-sm text-text-secondary backdrop-blur-sm">
+        <footer className="border-t border-border bg-surface/95 py-10 text-sm text-text-secondary backdrop-blur-sm">
           <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
             {/* Tools row */}
             <div className="mb-4">

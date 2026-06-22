@@ -127,30 +127,25 @@ function getKeywordDensity(text: string, wordCount: number): KeywordEntry[] {
     .slice(0, 10);
 }
 
-function StatCard({
+function StatCell({
   icon: Icon,
   label,
   value,
-  color,
+  highlight = false,
 }: {
   icon: React.ElementType;
   label: string;
   value: string | number;
-  color: string;
+  highlight?: boolean;
 }) {
   return (
-    <div className="group relative flex items-center gap-3 rounded-2xl border border-border bg-surface p-4 shadow-sm transition-all duration-200 hover:shadow-md hover:-translate-y-0.5">
-      <div
-        className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${color}`}
-      >
-        <Icon className="h-5 w-5 text-white" strokeWidth={2} />
-      </div>
-      <div className="min-w-0">
-        <p className="text-xs font-medium uppercase tracking-wider text-text-secondary">
-          {label}
-        </p>
-        <p className="animate-count text-xl font-bold text-text">{value}</p>
-      </div>
+    <div className="flex flex-col items-center gap-1 p-4 text-center">
+      <p className={`animate-count text-2xl font-bold ${highlight ? "text-primary" : "text-text"}`}>
+        {value}
+      </p>
+      <p className="mt-0.5 text-xs font-medium uppercase tracking-wider text-text-tertiary">
+        {label}
+      </p>
     </div>
   );
 }
@@ -185,14 +180,8 @@ export default function WordCounter() {
     setTimeout(() => setCopied(false), 2000);
   }, [text]);
 
-  const toUpperCase = useCallback(
-    () => setText((t) => t.toUpperCase()),
-    []
-  );
-  const toLowerCase = useCallback(
-    () => setText((t) => t.toLowerCase()),
-    []
-  );
+  const toUpperCase = useCallback(() => setText((t) => t.toUpperCase()), []);
+  const toLowerCase = useCallback(() => setText((t) => t.toLowerCase()), []);
   const toSentenceCase = useCallback(
     () =>
       setText((t) =>
@@ -211,181 +200,128 @@ export default function WordCounter() {
 
       {/* ---------- Header ---------- */}
       <header className="mb-8 text-center">
-        <h1 className="text-3xl font-extrabold tracking-tight text-text sm:text-4xl lg:text-5xl">
+        <h1 className="text-3xl font-bold leading-tight tracking-tight text-text sm:text-4xl">
           Free Online Word Counter —{" "}
           <span className="text-primary">
             Words, Characters, Sentences & Reading Time
           </span>
         </h1>
-        <p className="mx-auto mt-3 max-w-2xl text-base text-text-secondary sm:text-lg">
+        <p className="mx-auto mt-3 max-w-2xl text-base leading-relaxed text-text-secondary">
           Count words, characters, sentences &amp; paragraphs instantly. Get
           reading time, speaking time, and keyword density — all in real time.
         </p>
       </header>
 
       {/* ---------- Main Grid ---------- */}
-      <div className="grid gap-6 lg:grid-cols-[1fr_340px]">
-        {/* === LEFT: Editor + Toolbar === */}
+      <div className="grid gap-6 lg:grid-cols-[1fr_320px]">
+
+        {/* === LEFT: Main Card === */}
         <div className="flex flex-col gap-4">
-          {/* Toolbar */}
-          <div className="flex flex-wrap items-center gap-2 rounded-2xl border border-border bg-surface p-3 shadow-sm">
-            <ToolbarButton
-              icon={ArrowUpAZ}
-              label="UPPER"
-              onClick={toUpperCase}
-            />
-            <ToolbarButton
-              icon={ArrowDownAZ}
-              label="lower"
-              onClick={toLowerCase}
-            />
-            <ToolbarButton
-              icon={CaseSensitive}
-              label="Sentence"
-              onClick={toSentenceCase}
-            />
+          {/* Main editor card */}
+          <div className="overflow-hidden rounded-2xl border border-border bg-surface shadow-[var(--shadow-sm)]">
+            {/* Toolbar */}
+            <div className="flex flex-wrap items-center gap-1.5 border-b border-border bg-surface-alt px-4 py-2.5">
+              <ToolbarButton icon={ArrowUpAZ} label="UPPER" onClick={toUpperCase} variant="default" />
+              <ToolbarButton icon={ArrowDownAZ} label="lower" onClick={toLowerCase} variant="default" />
+              <ToolbarButton icon={CaseSensitive} label="Sentence" onClick={toSentenceCase} variant="default" />
 
-            <div className="mx-1 h-6 w-px bg-border" />
+              <div className="mx-1.5 h-5 w-px bg-border" />
 
-            <ToolbarButton
-              icon={copied ? Check : Copy}
-              label={copied ? "Copied!" : "Copy"}
-              onClick={handleCopy}
-              active={copied}
-            />
-            <ToolbarButton
-              icon={Eraser}
-              label="Clear"
-              onClick={clearText}
-              variant="danger"
-            />
+              <ToolbarButton
+                icon={copied ? Check : Copy}
+                label={copied ? "Copied!" : "Copy"}
+                onClick={handleCopy}
+                variant="copy"
+                active={copied}
+              />
+              <ToolbarButton icon={Eraser} label="Clear" onClick={clearText} variant="danger" />
 
-            <div className="ml-auto flex items-center gap-1.5 text-xs text-text-secondary">
-              <RotateCcw className="h-3.5 w-3.5" />
-              Auto-saved
+              <div className="ml-auto flex items-center gap-1 text-xs text-text-tertiary">
+                <RotateCcw className="h-3 w-3" />
+                Auto-saved
+              </div>
             </div>
-          </div>
 
-          {/* Textarea */}
-          <div className="relative">
+            {/* Textarea */}
             <textarea
               value={text}
               onChange={(e) => setText(e.target.value)}
               placeholder="Start typing or paste your text here…"
               aria-label="Text editor for word counting"
-              className="min-h-[420px] w-full resize-y rounded-2xl border border-border bg-surface p-5 text-base leading-relaxed text-text shadow-sm transition-shadow placeholder:text-text-secondary/50 focus:border-primary-light focus:shadow-[0_0_0_3px_rgba(37,99,235,0.1)] sm:text-lg"
+              className="min-h-[360px] w-full resize-y border-b border-border bg-surface p-5 text-base leading-relaxed text-text placeholder:text-text-tertiary focus:outline-none"
               spellCheck={false}
             />
+
+            {/* Inline stats row — desktop */}
+            <div className="hidden divide-x divide-border lg:grid lg:grid-cols-4">
+              <StatCell icon={Type} label="Words" value={stats.words.toLocaleString()} highlight />
+              <StatCell icon={FileText} label="Characters" value={stats.characters.toLocaleString()} />
+              <StatCell icon={Hash} label="No Spaces" value={stats.charactersNoSpaces.toLocaleString()} />
+              <StatCell icon={AlignLeft} label="Sentences" value={stats.sentences.toLocaleString()} />
+            </div>
           </div>
 
-          {/* Stats Grid (Mobile: shown below editor, Desktop: also visible) */}
+          {/* Stats Grid — mobile */}
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:hidden">
-            <StatCard
-              icon={Type}
-              label="Words"
-              value={stats.words.toLocaleString()}
-              color="bg-primary"
-            />
-            <StatCard
-              icon={FileText}
-              label="Characters"
-              value={stats.characters.toLocaleString()}
-              color="bg-accent-sky"
-            />
-            <StatCard
-              icon={Hash}
-              label="No Spaces"
-              value={stats.charactersNoSpaces.toLocaleString()}
-              color="bg-accent-teal"
-            />
-            <StatCard
-              icon={AlignLeft}
-              label="Sentences"
-              value={stats.sentences.toLocaleString()}
-              color="bg-accent-green"
-            />
-            <StatCard
-              icon={Pilcrow}
-              label="Paragraphs"
-              value={stats.paragraphs.toLocaleString()}
-              color="bg-accent-orange"
-            />
-            <StatCard
-              icon={Clock}
-              label="Read Time"
-              value={stats.readingTime}
-              color="bg-accent-red"
-            />
+            {[
+              { icon: Type,      label: "Words",      value: stats.words.toLocaleString(),               highlight: true  },
+              { icon: FileText,  label: "Characters", value: stats.characters.toLocaleString(),          highlight: false },
+              { icon: Hash,      label: "No Spaces",  value: stats.charactersNoSpaces.toLocaleString(), highlight: false },
+              { icon: AlignLeft, label: "Sentences",  value: stats.sentences.toLocaleString(),           highlight: false },
+              { icon: Pilcrow,   label: "Paragraphs", value: stats.paragraphs.toLocaleString(),          highlight: false },
+              { icon: Clock,     label: "Read Time",  value: stats.readingTime,                          highlight: false },
+            ].map((s) => (
+              <div
+                key={s.label}
+                className="rounded-xl border border-border bg-surface p-4 text-center shadow-[var(--shadow-sm)]"
+              >
+                <p className={`animate-count text-xl font-bold ${s.highlight ? "text-primary" : "text-text"}`}>
+                  {s.value}
+                </p>
+                <p className="mt-1 text-xs font-medium uppercase tracking-wider text-text-tertiary">
+                  {s.label}
+                </p>
+              </div>
+            ))}
           </div>
 
-          {/* Keyword Density (Desktop: below editor) */}
-          <div className="hidden rounded-2xl border border-border bg-surface p-5 shadow-sm lg:block">
+          {/* Keyword Density — Desktop */}
+          <div className="hidden rounded-2xl border border-border bg-surface p-5 shadow-[var(--shadow-sm)] lg:block">
             <div className="mb-4 flex items-center gap-2">
-              <BarChart3 className="h-5 w-5 text-primary" />
-              <h2 className="text-sm font-semibold uppercase tracking-wider text-text-secondary">
-                Keyword Density
-              </h2>
+              <BarChart3 className="h-4 w-4 text-primary" />
+              <h2 className="text-sm font-semibold text-text">Keyword Density</h2>
             </div>
             <KeywordTable keywords={keywords} />
           </div>
         </div>
 
-        {/* === RIGHT: Sidebar Dashboard === */}
+        {/* === RIGHT: Sidebar === */}
         <aside className="flex flex-col gap-4">
-          {/* Stat Cards — Desktop sidebar */}
-          <div className="hidden flex-col gap-3 lg:flex">
-            <StatCard
-              icon={Type}
-              label="Words"
-              value={stats.words.toLocaleString()}
-              color="bg-primary"
-            />
-            <StatCard
-              icon={FileText}
-              label="Characters"
-              value={stats.characters.toLocaleString()}
-              color="bg-accent-sky"
-            />
-            <StatCard
-              icon={Hash}
-              label="No Spaces"
-              value={stats.charactersNoSpaces.toLocaleString()}
-              color="bg-accent-teal"
-            />
-            <StatCard
-              icon={AlignLeft}
-              label="Sentences"
-              value={stats.sentences.toLocaleString()}
-              color="bg-accent-green"
-            />
-            <StatCard
-              icon={Pilcrow}
-              label="Paragraphs"
-              value={stats.paragraphs.toLocaleString()}
-              color="bg-accent-orange"
-            />
-            <StatCard
-              icon={Clock}
-              label="Read Time"
-              value={stats.readingTime}
-              color="bg-accent-red"
-            />
-            <StatCard
-              icon={Mic}
-              label="Speak Time"
-              value={stats.speakingTime}
-              color="bg-accent-slate"
-            />
+          {/* Sidebar stat cards — Desktop */}
+          <div className="hidden overflow-hidden rounded-2xl border border-border bg-surface shadow-[var(--shadow-sm)] lg:block">
+            <div className="divide-y divide-border">
+              {[
+                { icon: Type,      label: "Words",      value: stats.words.toLocaleString(),               highlight: true  },
+                { icon: FileText,  label: "Characters", value: stats.characters.toLocaleString(),          highlight: false },
+                { icon: Hash,      label: "No Spaces",  value: stats.charactersNoSpaces.toLocaleString(), highlight: false },
+                { icon: AlignLeft, label: "Sentences",  value: stats.sentences.toLocaleString(),           highlight: false },
+                { icon: Pilcrow,   label: "Paragraphs", value: stats.paragraphs.toLocaleString(),          highlight: false },
+                { icon: Clock,     label: "Read Time",  value: stats.readingTime,                          highlight: false },
+                { icon: Mic,       label: "Speak Time", value: stats.speakingTime,                         highlight: false },
+              ].map((s) => (
+                <StatCell key={s.label} icon={s.icon} label={s.label} value={s.value} highlight={s.highlight} />
+              ))}
+            </div>
           </div>
 
           {/* Sidebar Ad Slot */}
           <div className="min-h-[250px]" aria-hidden="true"></div>
 
           {/* Keyword Density — Mobile */}
-          <div className="rounded-2xl border border-border bg-surface p-5 shadow-sm lg:hidden">
+          <div className="rounded-2xl border border-border bg-surface p-5 shadow-[var(--shadow-sm)] lg:hidden">
             <div className="mb-4 flex items-center gap-2">
-              <BarChart3 className="h-5 w-5 text-primary" />
-              <p className="text-sm font-semibold uppercase tracking-wider text-text-secondary" aria-hidden="true">
+              <BarChart3 className="h-4 w-4 text-primary" />
+              <p className="text-sm font-semibold text-text" aria-hidden="true">
                 Keyword Density
               </p>
             </div>
@@ -415,19 +351,46 @@ function ToolbarButton({
   label: string;
   onClick: () => void;
   active?: boolean;
-  variant?: "default" | "danger";
+  variant?: "default" | "copy" | "danger";
 }) {
-  const base =
-    "inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-medium transition-colors";
-  const styles = {
-    default: active
-      ? "bg-green-50 text-accent-green"
-      : "text-text-secondary hover:bg-surface-hover hover:text-text",
-    danger: "text-text-secondary hover:bg-red-50 hover:text-accent-red",
-  };
+  const base = "inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-medium transition-colors";
+
+  if (variant === "copy") {
+    return (
+      <button
+        type="button"
+        onClick={onClick}
+        className={`${base} ${
+          active
+            ? "bg-accent-green-bg text-accent-green"
+            : "bg-primary text-text-inverse hover:bg-primary-dark"
+        }`}
+      >
+        <Icon className="h-3.5 w-3.5" strokeWidth={2} />
+        {label}
+      </button>
+    );
+  }
+
+  if (variant === "danger") {
+    return (
+      <button
+        type="button"
+        onClick={onClick}
+        className={`${base} text-text-secondary hover:bg-accent-red-bg hover:text-accent-red`}
+      >
+        <Icon className="h-3.5 w-3.5" strokeWidth={2} />
+        {label}
+      </button>
+    );
+  }
 
   return (
-    <button type="button" onClick={onClick} className={`${base} ${styles[variant]}`}>
+    <button
+      type="button"
+      onClick={onClick}
+      className={`${base} text-text-secondary hover:bg-surface hover:text-text`}
+    >
       <Icon className="h-3.5 w-3.5" strokeWidth={2} />
       {label}
     </button>
@@ -437,35 +400,45 @@ function ToolbarButton({
 function KeywordTable({ keywords }: { keywords: KeywordEntry[] }) {
   if (keywords.length === 0) {
     return (
-      <p className="py-6 text-center text-sm text-text-secondary/60">
+      <p className="py-6 text-center text-sm text-text-tertiary">
         Start typing to see keyword density analysis…
       </p>
     );
   }
 
+  const maxCount = keywords[0]?.count ?? 1;
+
   return (
     <div className="overflow-hidden rounded-xl border border-border">
       <table className="w-full text-left text-sm">
         <thead>
-          <tr className="bg-surface-alt text-xs uppercase tracking-wider text-text-secondary">
-            <th className="px-4 py-2.5 font-semibold">Keyword</th>
-            <th className="px-4 py-2.5 text-center font-semibold">Count</th>
-            <th className="px-4 py-2.5 text-right font-semibold">Density</th>
+          <tr className="bg-surface-alt text-xs font-semibold uppercase tracking-wider text-text-secondary">
+            <th className="px-4 py-3">Keyword</th>
+            <th className="px-4 py-3 text-center">Count</th>
+            <th className="px-4 py-3 text-right">Density</th>
           </tr>
         </thead>
         <tbody>
           {keywords.map((kw, i) => (
             <tr
               key={kw.word}
-              className={`border-t border-border transition-colors hover:bg-surface-hover ${
-                i % 2 === 0 ? "bg-surface" : "bg-surface-alt/50"
-              }`}
+              className="border-t border-border transition-colors hover:bg-surface-alt"
             >
-              <td className="px-4 py-2.5 font-medium text-text">{kw.word}</td>
-              <td className="px-4 py-2.5 text-center text-text-secondary">
+              <td className="px-4 py-3 font-medium text-text">
+                <div className="flex flex-col gap-1">
+                  <span>{kw.word}</span>
+                  <div className="h-1 w-full overflow-hidden rounded-full bg-primary-subtle">
+                    <div
+                      className="h-full rounded-full bg-primary transition-all"
+                      style={{ width: `${Math.round((kw.count / maxCount) * 100)}%` }}
+                    />
+                  </div>
+                </div>
+              </td>
+              <td className="px-4 py-3 text-center text-text-secondary">
                 {kw.count}
               </td>
-              <td className="px-4 py-2.5 text-right">
+              <td className="px-4 py-3 text-right">
                 <span className="inline-flex items-center gap-1 text-text-secondary">
                   <Percent className="h-3 w-3" />
                   {kw.density}

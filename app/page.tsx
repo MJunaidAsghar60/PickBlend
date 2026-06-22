@@ -5,13 +5,12 @@ import {
   ArrowRight,
   Zap,
   Shield,
+  BarChart3,
+  MousePointerClick,
   Timer,
   Hash,
   CaseSensitive,
   FileText,
-  BarChart3,
-  Sparkles,
-  MousePointerClick,
   AlignLeft,
   Repeat,
   BookOpen,
@@ -29,32 +28,24 @@ const features = [
     title: "Lightning Fast",
     description:
       "Real-time analysis as you type — no waiting, no page reloads, instant results.",
-    iconColor: "text-accent-orange",
-    bg: "bg-orange-50",
   },
   {
     icon: Shield,
     title: "100% Private",
     description:
       "Your text never leaves your browser. Everything runs locally with zero server calls.",
-    iconColor: "text-accent-green",
-    bg: "bg-green-50",
   },
   {
     icon: BarChart3,
     title: "Deep Insights",
     description:
       "Go beyond word count — keyword density, reading time, speaking time and more.",
-    iconColor: "text-primary",
-    bg: "bg-blue-50",
   },
   {
     icon: MousePointerClick,
     title: "Zero Friction",
     description:
-      "No sign-ups, minimal, non-intrusive ads, no paywalls. Just open and start writing.",
-    iconColor: "text-accent-red",
-    bg: "bg-red-50",
+      "No sign-ups, no paywalls, no intrusive ads. Just open and start writing.",
   },
 ];
 
@@ -67,6 +58,8 @@ const toolsList = [
       "Count words, characters, sentences & paragraphs. Get reading time estimates, keyword density analysis, and text transformation tools.",
     tag: "Most Popular",
     cta: "Count Words Free →",
+    iconBg: "bg-primary-subtle",
+    iconColor: "text-primary",
   },
   {
     name: "Reading Time Calculator",
@@ -76,15 +69,19 @@ const toolsList = [
       "Calculate reading time, speaking time, and presentation pacing. Supports multiple speeds with benchmarks for articles, speeches, podcasts, and video scripts.",
     tag: "New",
     cta: "Calculate Reading Time →",
+    iconBg: "bg-accent-amber-bg",
+    iconColor: "text-accent-amber",
   },
   {
     name: "Character Counter",
     href: "/tools/character-counter",
     icon: Hash,
     description:
-      "Count characters with and without spaces instantly. Check Twitter, Instagram, SMS and meta tag limits in real time.",
+      "Count characters with and without spaces instantly. Check X, Instagram, SMS and meta tag limits in real time.",
     tag: "New",
     cta: "Count Characters Free →",
+    iconBg: "bg-accent-orange-bg",
+    iconColor: "text-accent-orange",
   },
   {
     name: "Text Case Converter",
@@ -94,6 +91,8 @@ const toolsList = [
       "Convert text to UPPERCASE, lowercase, Title Case, camelCase, snake_case and more with a single click.",
     tag: "New",
     cta: "Convert Case Free →",
+    iconBg: "bg-accent-sky-bg",
+    iconColor: "text-accent-sky",
   },
   {
     name: "Lorem Ipsum Generator",
@@ -103,6 +102,8 @@ const toolsList = [
       "Generate placeholder text by paragraphs, sentences or words. Perfect for designers and developers.",
     tag: "New",
     cta: "Generate Text Free →",
+    iconBg: "bg-accent-green-bg",
+    iconColor: "text-accent-green",
   },
   {
     name: "Sentence Counter",
@@ -112,6 +113,8 @@ const toolsList = [
       "Count sentences in real time with average length analysis and numbered sentence breakdown. Perfect for writers and students.",
     tag: "New",
     cta: "Count Sentences Free →",
+    iconBg: "bg-primary-subtle",
+    iconColor: "text-primary",
   },
   {
     name: "Text Repeater",
@@ -121,6 +124,8 @@ const toolsList = [
       "Repeat any text 1 to 100 times with custom separators, prefix, suffix and auto numbering. Perfect for developers and QA testing.",
     tag: "New",
     cta: "Repeat Text Free →",
+    iconBg: "bg-accent-amber-bg",
+    iconColor: "text-accent-amber",
   },
   {
     name: "Readability Score",
@@ -130,6 +135,8 @@ const toolsList = [
       "Check Flesch Reading Ease, Flesch-Kincaid Grade Level and 6 readability scores instantly. Includes a visual difficulty gauge.",
     tag: "New",
     cta: "Check Readability Free →",
+    iconBg: "bg-[#FDF4FF]",
+    iconColor: "text-purple-600",
   },
   {
     name: "Word Frequency Counter",
@@ -139,6 +146,8 @@ const toolsList = [
       "Analyze word frequency with a sortable table, stop words filter and keyword density percentage. Essential for SEO writers.",
     tag: "New",
     cta: "Analyze Word Frequency →",
+    iconBg: "bg-accent-orange-bg",
+    iconColor: "text-accent-orange",
   },
   {
     name: "Paragraph Counter",
@@ -148,51 +157,65 @@ const toolsList = [
       "Count paragraphs with per-paragraph word count, sentence count and character count breakdown. Perfect for long-form writers.",
     tag: "New",
     cta: "Count Paragraphs Free →",
+    iconBg: "bg-accent-green-bg",
+    iconColor: "text-accent-green",
   },
 ];
 
+function TagBadge({ tag }: { tag: string }) {
+  if (tag === "Most Popular") {
+    return (
+      <span className="rounded-full border border-primary-border bg-primary-subtle px-2 py-0.5 text-xs font-medium text-primary">
+        {tag}
+      </span>
+    );
+  }
+  if (tag === "Dev Tool") {
+    return (
+      <span className="rounded-full border border-accent-sky-bg bg-accent-sky-bg px-2 py-0.5 text-xs font-medium text-accent-sky">
+        {tag}
+      </span>
+    );
+  }
+  return (
+    <span className="rounded-full border border-accent-green-border bg-accent-green-bg px-2 py-0.5 text-xs font-medium text-accent-green">
+      {tag}
+    </span>
+  );
+}
+
 export default function HomePage() {
   return (
-    <main>
+    <main className="bg-background">
       {/* ========== HERO ========== */}
-      <section className="relative overflow-hidden px-4 pb-16 pt-20 sm:px-6 sm:pb-24 sm:pt-28 lg:px-8">
-        {/* Background decorations */}
-        <div className="pointer-events-none absolute inset-0 -z-10">
-          <div className="absolute -left-40 -top-40 h-125 w-125 rounded-full bg-primary/5 blur-3xl" />
-          <div className="absolute -bottom-20 -right-40 h-100 w-100 rounded-full bg-primary/3 blur-3xl" />
-        </div>
-
-        <div className="mx-auto max-w-4xl text-center">
-          {/* Badge */}
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary">
-            <Sparkles className="h-4 w-4" />
-            Free forever — no sign-up required
+      <section className="px-4 pb-20 pt-16 sm:px-6 sm:pb-28 sm:pt-24 lg:px-8">
+        <div className="mx-auto max-w-3xl text-center">
+          {/* Announcement pill */}
+          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary-border bg-primary-subtle px-3 py-1.5 text-xs font-medium text-primary">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary" />
+            10 free tools — no sign-up, no tracking
           </div>
 
-          <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-text sm:text-5xl lg:text-6xl">
+          <h1 className="text-4xl font-bold leading-[1.12] tracking-tight text-text sm:text-5xl">
             Free Online Writing Tools —{" "}
             <span className="text-primary">Word Counter, Reading Time & More</span>
           </h1>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-text-secondary sm:text-xl">
+          <p className="mx-auto mt-4 mb-8 max-w-xl text-lg leading-relaxed text-text-secondary">
             Instant, browser-based utilities for writers, students, bloggers and content creators. No sign-up, 100% private.
           </p>
 
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-text-secondary">
-            Free, blazing-fast writing utilities that run entirely in your browser. Count words, analyze keyword density, calculate reading and speaking time — all in real time, all completely free, all 100% private.
-          </p>
-
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link
               href="/tools/word-counter"
-              className="group inline-flex items-center gap-2 rounded-2xl bg-primary px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:bg-primary-dark hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-medium text-text-inverse shadow-[var(--shadow-primary)] transition-all duration-150 hover:-translate-y-0.5 hover:bg-primary-dark hover:shadow-lg"
             >
               Count Words Free →
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              <ArrowRight className="h-4 w-4" />
             </Link>
             <a
               href="#tools"
-              className="inline-flex items-center gap-2 rounded-2xl border border-border bg-white px-8 py-3.5 text-sm font-semibold text-text shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 rounded-xl border border-border bg-surface px-6 py-3 text-sm font-medium text-text transition-all duration-150 hover:bg-surface-hover"
             >
               Explore All Tools
             </a>
@@ -200,36 +223,31 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ========== FEATURES ========== */}
+      {/* ========== WHY CHOOSE ========== */}
       <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-        <div className="mx-auto max-w-6xl">
-          <div className="mb-12 text-center">
-            <h2 className="text-2xl font-bold text-text sm:text-3xl">
-              Why Choose PickBlend?
-            </h2>
-            <p className="mt-3 text-text-secondary">
-              Built differently — designed for speed, privacy, and delight.
+        <div className="mx-auto max-w-5xl">
+          <div className="mb-10 text-center">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-primary">
+              Why PickBlend
             </p>
+            <h2 className="text-2xl font-bold tracking-tight text-text sm:text-3xl">
+              Built for Speed, Privacy & Simplicity
+            </h2>
           </div>
 
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {features.map((f) => {
               const Icon = f.icon;
               return (
                 <div
                   key={f.title}
-                  className="group rounded-2xl border border-border bg-white p-6 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1"
+                  className="rounded-2xl border border-border bg-surface p-6 transition-all duration-150 hover:border-primary-border hover:shadow-[var(--shadow-md)]"
                 >
-                  <div
-                    className={`mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl ${f.bg}`}
-                  >
-                    <Icon
-                      className={`h-6 w-6 ${f.iconColor}`}
-                      strokeWidth={2}
-                    />
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-primary-subtle text-primary">
+                    <Icon className="h-5 w-5" strokeWidth={2} />
                   </div>
-                  <h3 className="text-base font-bold text-text">{f.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-text-secondary">
+                  <h3 className="mb-1 text-base font-semibold text-text">{f.title}</h3>
+                  <p className="text-sm leading-relaxed text-text-secondary">
                     {f.description}
                   </p>
                 </div>
@@ -239,59 +257,55 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ========== TOOLS SHOWCASE ========== */}
+      {/* ========== TOOLS GRID ========== */}
       <section id="tools" className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-        <div className="mx-auto max-w-4xl">
-          <div className="mb-12 text-center">
-            <h2 className="text-2xl font-bold text-text sm:text-3xl">
-              Our Tools
-            </h2>
-            <p className="mt-3 text-text-secondary">
-              Explore our growing collection of free writing and SEO utilities.
+        <div className="mx-auto max-w-5xl">
+          <div className="mb-10 text-center">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-primary">
+              All Tools
             </p>
+            <h2 className="text-2xl font-bold tracking-tight text-text sm:text-3xl">
+              10 Free Writing Utilities
+            </h2>
           </div>
 
-          <div className="space-y-5">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {toolsList.map((tool) => {
               const Icon = tool.icon;
               return (
                 <Link
                   key={tool.href}
                   href={tool.href}
-                  className="group flex flex-col gap-5 rounded-2xl border border-border bg-white p-6 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1 sm:flex-row sm:items-center sm:p-8"
+                  className="group flex flex-col rounded-2xl border border-border bg-surface p-5 transition-all duration-150 hover:-translate-y-0.5 hover:border-primary-border hover:shadow-[var(--shadow-md)]"
                 >
-                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-primary shadow-lg shadow-primary/20">
-                    <Icon className="h-8 w-8 text-white" strokeWidth={1.8} />
+                  <div className={`mb-4 flex h-10 w-10 items-center justify-center rounded-xl ${tool.iconBg} ${tool.iconColor}`}>
+                    <Icon className="h-5 w-5" strokeWidth={2} />
                   </div>
-                  <div className="flex-1">
-                    <div className="flex flex-wrap items-center gap-3">
-                      <h3 className="text-lg font-bold text-text">
-                        {tool.name}
-                      </h3>
-                      {tool.tag && (
-                        <span className="rounded-full bg-primary/10 px-3 py-0.5 text-xs font-semibold text-primary">
-                          {tool.tag}
-                        </span>
-                      )}
-                    </div>
-                    <p className="mt-2 text-sm leading-relaxed text-text-secondary">
-                      {tool.description}
-                    </p>
+
+                  <div className="mb-1 flex flex-wrap items-center gap-2">
+                    <h3 className="text-base font-semibold text-text">
+                      {tool.name}
+                    </h3>
+                    <TagBadge tag={tool.tag} />
                   </div>
-                  <div className="flex shrink-0 items-center gap-1.5 text-sm font-semibold text-primary transition-transform group-hover:translate-x-1">
+
+                  <p className="mb-4 text-sm leading-relaxed text-text-secondary">
+                    {tool.description}
+                  </p>
+
+                  <div className="mt-auto flex items-center gap-1 text-sm font-medium text-primary transition-colors group-hover:text-primary-dark">
                     {tool.cta}
-                    <ArrowRight className="h-4 w-4" />
+                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                   </div>
                 </Link>
               );
             })}
           </div>
 
-          {/* Browse all tools */}
           <div className="mt-8 text-center">
             <Link
               href="/tools"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline underline-offset-2"
+              className="text-sm font-medium text-primary transition-colors hover:text-primary-dark"
             >
               Browse all 10 tools →
             </Link>
@@ -300,42 +314,37 @@ export default function HomePage() {
       </section>
 
       {/* ========== STATS STRIP ========== */}
-      <section className="border-y border-border bg-white px-4 py-12 sm:px-6 lg:px-8">
+      <section className="border-y border-border bg-surface px-4 py-10 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-4xl grid-cols-2 gap-8 text-center sm:grid-cols-4">
           {[
+            { value: "10", label: "Tools" },
             { value: "100%", label: "Free Forever" },
-            { value: "0", label: "Data Sent to Servers" },
-            { value: "<1s", label: "Analysis Speed" },
-            { value: "24/7", label: "Available Online" },
+            { value: "0", label: "Data Sent" },
+            { value: "238 wpm", label: "Default Speed" },
           ].map((s) => (
             <div key={s.label}>
-              <p className="text-2xl font-extrabold text-primary sm:text-3xl">
-                {s.value}
-              </p>
-              <p className="mt-1 text-xs font-medium uppercase tracking-wider text-text-secondary">
-                {s.label}
-              </p>
+              <p className="text-3xl font-bold text-text">{s.value}</p>
+              <p className="mt-1 text-sm text-text-secondary">{s.label}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* ========== FINAL CTA ========== */}
+      {/* ========== BOTTOM CTA ========== */}
       <section className="px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-bold text-text sm:text-3xl">
+        <div className="mx-auto max-w-2xl rounded-3xl border border-primary-border bg-primary-subtle p-10 text-center">
+          <h2 className="text-2xl font-bold text-text">
             Ready to level up your writing?
           </h2>
-          <p className="mt-4 text-text-secondary">
-            Jump into our Word Counter tool right now — no sign-up, no cost,
-            no catch.
+          <p className="mt-2 mb-6 text-text-secondary">
+            Jump into our Word Counter right now — no sign-up, no cost, no catch.
           </p>
           <Link
             href="/tools/word-counter"
-            className="group mt-8 inline-flex items-center gap-2 rounded-2xl bg-primary px-10 py-4 text-sm font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:bg-primary-dark hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-3 text-sm font-medium text-text-inverse shadow-[var(--shadow-primary)] transition-all hover:bg-primary-dark hover:shadow-lg"
           >
             Get Started — It&apos;s Free
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </section>
