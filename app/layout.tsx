@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     siteName: "PickBlend",
     title: "Free Online Writing Tools | PickBlend",
     description:
-      "Free word counter, reading time calculator and more. No ads blocking your view. 100% private — your text never leaves your browser.",
+      "Free word counter, reading time calculator and more. No intrusive ads. 100% private — your text never leaves your browser.",
     images: [
       {
         url: `${BASE_URL}/og/home.png`,
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Free Online Writing Tools | PickBlend",
     description:
-      "Free word counter, reading time calculator and more. No ads blocking your view. 100% private — your text never leaves your browser.",
+      "Free word counter, reading time calculator and more. No intrusive ads. 100% private — your text never leaves your browser.",
     images: [`${BASE_URL}/og/home.png`],
   },
   alternates: {

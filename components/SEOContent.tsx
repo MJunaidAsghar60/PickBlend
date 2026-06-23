@@ -243,12 +243,12 @@ export default function SEOContent() {
               </thead>
               <tbody className="divide-y divide-border text-text-secondary">
                 {[
-                  ["500", "1 min 49 sec", "3 min 51 sec"],
-                  ["1,000", "3 min 38 sec", "7 min 42 sec"],
-                  ["1,500", "5 min 27 sec", "11 min 32 sec"],
-                  ["2,000", "7 min 16 sec", "15 min 23 sec"],
-                  ["3,000", "10 min 55 sec", "23 min 5 sec"],
-                  ["5,000", "18 min 11 sec", "38 min 28 sec"],
+                  ["500", "2 min 6 sec", "3 min 51 sec"],
+                  ["1,000", "4 min 12 sec", "7 min 42 sec"],
+                  ["1,500", "6 min 18 sec", "11 min 32 sec"],
+                  ["2,000", "8 min 24 sec", "15 min 23 sec"],
+                  ["3,000", "12 min 36 sec", "23 min 5 sec"],
+                  ["5,000", "21 min 0 sec", "38 min 28 sec"],
                 ].map(([words, read, speak], i) => (
                   <tr
                     key={words}

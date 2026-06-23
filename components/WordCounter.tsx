@@ -127,29 +127,6 @@ function getKeywordDensity(text: string, wordCount: number): KeywordEntry[] {
     .slice(0, 10);
 }
 
-function StatCell({
-  icon: Icon,
-  label,
-  value,
-  highlight = false,
-}: {
-  icon: React.ElementType;
-  label: string;
-  value: string | number;
-  highlight?: boolean;
-}) {
-  return (
-    <div className="flex flex-col items-center gap-1 p-4 text-center">
-      <p className={`animate-count text-2xl font-bold ${highlight ? "text-primary" : "text-text"}`}>
-        {value}
-      </p>
-      <p className="mt-0.5 text-xs font-medium uppercase tracking-wider text-text-tertiary">
-        {label}
-      </p>
-    </div>
-  );
-}
-
 export default function WordCounter() {
   const [text, setText] = useState("");
   const [copied, setCopied] = useState(false);
@@ -193,8 +170,19 @@ export default function WordCounter() {
   );
   const clearText = useCallback(() => setText(""), []);
 
+  // Single stats array — rendered ONCE with responsive grid
+  const statItems = [
+    { icon: Type,      label: "Words",      value: stats.words.toLocaleString(),               highlight: true  },
+    { icon: FileText,  label: "Characters", value: stats.characters.toLocaleString(),          highlight: false },
+    { icon: Hash,      label: "No Spaces",  value: stats.charactersNoSpaces.toLocaleString(), highlight: false },
+    { icon: AlignLeft, label: "Sentences",  value: stats.sentences.toLocaleString(),           highlight: false },
+    { icon: Pilcrow,   label: "Paragraphs", value: stats.paragraphs.toLocaleString(),          highlight: false },
+    { icon: Clock,     label: "Read Time",  value: stats.readingTime,                          highlight: false },
+    { icon: Mic,       label: "Speak Time", value: stats.speakingTime,                         highlight: false },
+  ];
+
   return (
-    <section className="animate-fade-in mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+    <section className="animate-fade-in mx-auto w-full max-w-5xl px-4 py-6 sm:px-6 lg:px-8">
       {/* ---------- Top Banner Ad Slot ---------- */}
       <div className="mb-6 min-h-[90px]" aria-hidden="true"></div>
 
@@ -212,122 +200,66 @@ export default function WordCounter() {
         </p>
       </header>
 
-      {/* ---------- Main Grid ---------- */}
-      <div className="grid gap-6 lg:grid-cols-[1fr_320px]">
+      {/* ---------- Editor Card ---------- */}
+      <div className="overflow-hidden rounded-2xl border border-border bg-surface shadow-[var(--shadow-sm)]">
+        {/* Toolbar */}
+        <div className="flex flex-wrap items-center gap-1.5 border-b border-border bg-surface-alt px-4 py-2.5">
+          <ToolbarButton icon={ArrowUpAZ} label="UPPER" onClick={toUpperCase} variant="default" />
+          <ToolbarButton icon={ArrowDownAZ} label="lower" onClick={toLowerCase} variant="default" />
+          <ToolbarButton icon={CaseSensitive} label="Sentence" onClick={toSentenceCase} variant="default" />
 
-        {/* === LEFT: Main Card === */}
-        <div className="flex flex-col gap-4">
-          {/* Main editor card */}
-          <div className="overflow-hidden rounded-2xl border border-border bg-surface shadow-[var(--shadow-sm)]">
-            {/* Toolbar */}
-            <div className="flex flex-wrap items-center gap-1.5 border-b border-border bg-surface-alt px-4 py-2.5">
-              <ToolbarButton icon={ArrowUpAZ} label="UPPER" onClick={toUpperCase} variant="default" />
-              <ToolbarButton icon={ArrowDownAZ} label="lower" onClick={toLowerCase} variant="default" />
-              <ToolbarButton icon={CaseSensitive} label="Sentence" onClick={toSentenceCase} variant="default" />
+          <div className="mx-1.5 h-5 w-px bg-border" />
 
-              <div className="mx-1.5 h-5 w-px bg-border" />
+          <ToolbarButton
+            icon={copied ? Check : Copy}
+            label={copied ? "Copied!" : "Copy"}
+            onClick={handleCopy}
+            variant="copy"
+            active={copied}
+          />
+          <ToolbarButton icon={Eraser} label="Clear" onClick={clearText} variant="danger" />
 
-              <ToolbarButton
-                icon={copied ? Check : Copy}
-                label={copied ? "Copied!" : "Copy"}
-                onClick={handleCopy}
-                variant="copy"
-                active={copied}
-              />
-              <ToolbarButton icon={Eraser} label="Clear" onClick={clearText} variant="danger" />
-
-              <div className="ml-auto flex items-center gap-1 text-xs text-text-tertiary">
-                <RotateCcw className="h-3 w-3" />
-                Auto-saved
-              </div>
-            </div>
-
-            {/* Textarea */}
-            <textarea
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-              placeholder="Start typing or paste your text here…"
-              aria-label="Text editor for word counting"
-              className="min-h-[360px] w-full resize-y border-b border-border bg-surface p-5 text-base leading-relaxed text-text placeholder:text-text-tertiary focus:outline-none"
-              spellCheck={false}
-            />
-
-            {/* Inline stats row — desktop */}
-            <div className="hidden divide-x divide-border lg:grid lg:grid-cols-4">
-              <StatCell icon={Type} label="Words" value={stats.words.toLocaleString()} highlight />
-              <StatCell icon={FileText} label="Characters" value={stats.characters.toLocaleString()} />
-              <StatCell icon={Hash} label="No Spaces" value={stats.charactersNoSpaces.toLocaleString()} />
-              <StatCell icon={AlignLeft} label="Sentences" value={stats.sentences.toLocaleString()} />
-            </div>
-          </div>
-
-          {/* Stats Grid — mobile */}
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:hidden">
-            {[
-              { icon: Type,      label: "Words",      value: stats.words.toLocaleString(),               highlight: true  },
-              { icon: FileText,  label: "Characters", value: stats.characters.toLocaleString(),          highlight: false },
-              { icon: Hash,      label: "No Spaces",  value: stats.charactersNoSpaces.toLocaleString(), highlight: false },
-              { icon: AlignLeft, label: "Sentences",  value: stats.sentences.toLocaleString(),           highlight: false },
-              { icon: Pilcrow,   label: "Paragraphs", value: stats.paragraphs.toLocaleString(),          highlight: false },
-              { icon: Clock,     label: "Read Time",  value: stats.readingTime,                          highlight: false },
-            ].map((s) => (
-              <div
-                key={s.label}
-                className="rounded-xl border border-border bg-surface p-4 text-center shadow-[var(--shadow-sm)]"
-              >
-                <p className={`animate-count text-xl font-bold ${s.highlight ? "text-primary" : "text-text"}`}>
-                  {s.value}
-                </p>
-                <p className="mt-1 text-xs font-medium uppercase tracking-wider text-text-tertiary">
-                  {s.label}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          {/* Keyword Density — Desktop */}
-          <div className="hidden rounded-2xl border border-border bg-surface p-5 shadow-[var(--shadow-sm)] lg:block">
-            <div className="mb-4 flex items-center gap-2">
-              <BarChart3 className="h-4 w-4 text-primary" />
-              <h2 className="text-sm font-semibold text-text">Keyword Density</h2>
-            </div>
-            <KeywordTable keywords={keywords} />
+          <div className="ml-auto flex items-center gap-1 text-xs text-text-tertiary">
+            <RotateCcw className="h-3 w-3" />
+            Auto-saved
           </div>
         </div>
 
-        {/* === RIGHT: Sidebar === */}
-        <aside className="flex flex-col gap-4">
-          {/* Sidebar stat cards — Desktop */}
-          <div className="hidden overflow-hidden rounded-2xl border border-border bg-surface shadow-[var(--shadow-sm)] lg:block">
-            <div className="divide-y divide-border">
-              {[
-                { icon: Type,      label: "Words",      value: stats.words.toLocaleString(),               highlight: true  },
-                { icon: FileText,  label: "Characters", value: stats.characters.toLocaleString(),          highlight: false },
-                { icon: Hash,      label: "No Spaces",  value: stats.charactersNoSpaces.toLocaleString(), highlight: false },
-                { icon: AlignLeft, label: "Sentences",  value: stats.sentences.toLocaleString(),           highlight: false },
-                { icon: Pilcrow,   label: "Paragraphs", value: stats.paragraphs.toLocaleString(),          highlight: false },
-                { icon: Clock,     label: "Read Time",  value: stats.readingTime,                          highlight: false },
-                { icon: Mic,       label: "Speak Time", value: stats.speakingTime,                         highlight: false },
-              ].map((s) => (
-                <StatCell key={s.label} icon={s.icon} label={s.label} value={s.value} highlight={s.highlight} />
-              ))}
-            </div>
-          </div>
+        {/* Textarea */}
+        <textarea
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+          placeholder="Start typing or paste your text here…"
+          aria-label="Text editor for word counting"
+          className="min-h-[360px] w-full resize-y bg-surface p-5 text-base leading-relaxed text-text placeholder:text-text-tertiary focus:outline-none"
+          spellCheck={false}
+        />
+      </div>
 
-          {/* Sidebar Ad Slot */}
-          <div className="min-h-[250px]" aria-hidden="true"></div>
-
-          {/* Keyword Density — Mobile */}
-          <div className="rounded-2xl border border-border bg-surface p-5 shadow-[var(--shadow-sm)] lg:hidden">
-            <div className="mb-4 flex items-center gap-2">
-              <BarChart3 className="h-4 w-4 text-primary" />
-              <p className="text-sm font-semibold text-text" aria-hidden="true">
-                Keyword Density
-              </p>
-            </div>
-            <KeywordTable keywords={keywords} />
+      {/* ---------- Stats Grid — rendered ONCE, reflows responsively ---------- */}
+      <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-7">
+        {statItems.map((s) => (
+          <div
+            key={s.label}
+            className="rounded-xl border border-border bg-surface p-4 text-center shadow-[var(--shadow-sm)]"
+          >
+            <p className={`animate-count text-xl font-bold ${s.highlight ? "text-primary" : "text-text"}`}>
+              {s.value}
+            </p>
+            <p className="mt-1 text-xs font-medium uppercase tracking-wider text-text-tertiary">
+              {s.label}
+            </p>
           </div>
-        </aside>
+        ))}
+      </div>
+
+      {/* ---------- Word frequency analysis ---------- */}
+      <div className="mt-4 rounded-2xl border border-border bg-surface p-5 shadow-[var(--shadow-sm)]">
+        <div className="mb-4 flex items-center gap-2">
+          <BarChart3 className="h-4 w-4 text-primary" />
+          <h2 className="text-sm font-semibold text-text">Keyword Density</h2>
+        </div>
+        <KeywordTable keywords={keywords} />
       </div>
 
       {/* ---------- In-Content Ad Slot ---------- */}
@@ -419,7 +351,7 @@ function KeywordTable({ keywords }: { keywords: KeywordEntry[] }) {
           </tr>
         </thead>
         <tbody>
-          {keywords.map((kw, i) => (
+          {keywords.map((kw) => (
             <tr
               key={kw.word}
               className="border-t border-border transition-colors hover:bg-surface-alt"
