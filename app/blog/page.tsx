@@ -61,6 +61,16 @@ function PageJsonLd() {
 
 const posts = [
   {
+    slug: "free-text-to-speech-guide",
+    category: "Accessibility",
+    title: "Free Text to Speech in 2026: The Complete Guide",
+    excerpt:
+      "Everything you need to know about free text to speech — how it works, who it helps, browser vs AI voices, and how to convert any text to natural audio instantly with no sign-up.",
+    readingTime: "9 min read",
+    date: "April 12, 2026",
+    dateISO: "2026-04-12",
+  },
+  {
     slug: "camelcase-vs-snake-case",
     category: "Developer Tools",
     title: "camelCase vs snake_case — When to Use Each (Complete Guide for Developers)",
