@@ -13,6 +13,7 @@ import {
   BarChart3,
   TrendingUp,
   Pilcrow,
+  Volume2,
 } from "lucide-react";
 
 const BASE_URL = "https://pickblend.com";
@@ -59,13 +60,19 @@ function PageJsonLd() {
     "@type": "ItemList",
     name: "Free Writing Tools",
     url: `${BASE_URL}/tools`,
-    numberOfItems: 5,
+    numberOfItems: 11,
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Word Counter", url: `${BASE_URL}/tools/word-counter` },
       { "@type": "ListItem", position: 2, name: "Reading Time Calculator", url: `${BASE_URL}/tools/reading-time-calculator` },
       { "@type": "ListItem", position: 3, name: "Character Counter", url: `${BASE_URL}/tools/character-counter` },
       { "@type": "ListItem", position: 4, name: "Text Case Converter", url: `${BASE_URL}/tools/case-converter` },
       { "@type": "ListItem", position: 5, name: "Lorem Ipsum Generator", url: `${BASE_URL}/tools/lorem-ipsum-generator` },
+      { "@type": "ListItem", position: 6, name: "Sentence Counter", url: `${BASE_URL}/tools/sentence-counter` },
+      { "@type": "ListItem", position: 7, name: "Text Repeater", url: `${BASE_URL}/tools/text-repeater` },
+      { "@type": "ListItem", position: 8, name: "Readability Score Checker", url: `${BASE_URL}/tools/readability-score` },
+      { "@type": "ListItem", position: 9, name: "Word Frequency Counter", url: `${BASE_URL}/tools/word-frequency` },
+      { "@type": "ListItem", position: 10, name: "Paragraph Counter", url: `${BASE_URL}/tools/paragraph-counter` },
+      { "@type": "ListItem", position: 11, name: "Text to Speech", url: `${BASE_URL}/tools/text-to-speech` },
     ],
   };
 
@@ -177,6 +184,16 @@ const liveTools = [
     badge: "New",
     badgeColor: "bg-accent-green/10 text-accent-green",
     cta: "Count Paragraphs Free →",
+  },
+  {
+    name: "Text to Speech",
+    href: "/tools/text-to-speech",
+    icon: Volume2,
+    description:
+      "Convert any text to natural speech instantly. Multiple voices, adjustable speed and pitch. No sign-up, 100% private, runs in your browser.",
+    badge: "New",
+    badgeColor: "bg-accent-green/10 text-accent-green",
+    cta: "Convert Text to Speech →",
   },
 ];
 

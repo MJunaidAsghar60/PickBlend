@@ -16,6 +16,7 @@ import {
   BookOpen,
   TrendingUp,
   Pilcrow,
+  Volume2,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -160,6 +161,17 @@ const toolsList = [
     iconBg: "bg-accent-green-bg",
     iconColor: "text-accent-green",
   },
+  {
+    name: "Text to Speech",
+    href: "/tools/text-to-speech",
+    icon: Volume2,
+    description:
+      "Convert any text to natural speech instantly. Multiple voices, adjustable speed and pitch. No sign-up, 100% private, runs in your browser.",
+    tag: "New",
+    cta: "Convert Text to Speech →",
+    iconBg: "bg-accent-sky-bg",
+    iconColor: "text-accent-sky",
+  },
 ];
 
 function TagBadge({ tag }: { tag: string }) {
@@ -193,7 +205,7 @@ export default function HomePage() {
           {/* Announcement pill */}
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary-border bg-primary-subtle px-3 py-1.5 text-xs font-medium text-primary">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary" />
-            10 free tools — no sign-up, no tracking
+            11 free tools — no sign-up, no tracking
           </div>
 
           <h1 className="text-4xl font-bold leading-[1.12] tracking-tight text-text sm:text-5xl">
@@ -265,7 +277,7 @@ export default function HomePage() {
               All Tools
             </p>
             <h2 className="text-2xl font-bold tracking-tight text-text sm:text-3xl">
-              10 Free Writing Utilities
+              11 Free Writing Utilities
             </h2>
           </div>
 
@@ -307,7 +319,7 @@ export default function HomePage() {
               href="/tools"
               className="text-sm font-medium text-primary transition-colors hover:text-primary-dark"
             >
-              Browse all 10 tools →
+              Browse all 11 tools →
             </Link>
           </div>
         </div>
@@ -317,7 +329,7 @@ export default function HomePage() {
       <section className="border-y border-border bg-surface px-4 py-10 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-4xl grid-cols-2 gap-8 text-center sm:grid-cols-4">
           {[
-            { value: "10", label: "Tools" },
+            { value: "11", label: "Tools" },
             { value: "100%", label: "Free Forever" },
             { value: "0", label: "Data Sent" },
             { value: "238 wpm", label: "Default Speed" },

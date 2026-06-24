@@ -18,6 +18,7 @@ import {
   Mail,
   BookOpen,
   ArrowRight,
+  Volume2,
 } from "lucide-react";
 
 const tools = [
@@ -50,6 +51,12 @@ const tools = [
     href: "/tools/lorem-ipsum-generator",
     icon: FileText,
     description: "Generate placeholder text instantly",
+  },
+  {
+    name: "Text to Speech",
+    href: "/tools/text-to-speech",
+    icon: Volume2,
+    description: "Convert text to speech in your browser",
   },
 ];
 
@@ -187,7 +194,7 @@ export default function Navbar() {
                 })}
                 <div className="mt-1.5 flex items-center justify-between border-t border-border px-3 pb-1 pt-2">
                   <p className="text-xs italic text-text-tertiary">
-                    10 tools total
+                    11 tools total
                   </p>
                   <Link
                     href="/tools"
@@ -313,7 +320,7 @@ export default function Navbar() {
                     href="/tools"
                     className="flex items-center gap-2 rounded-xl px-3 py-2 text-xs font-semibold text-primary hover:bg-primary-subtle transition-colors"
                   >
-                    View all 10 tools →
+                    View all 11 tools →
                   </Link>
                 </div>
               )}
